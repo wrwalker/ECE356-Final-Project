@@ -1,18 +1,8 @@
 use Election;
 drop table if exists ElectionTweets;
-SHOW VARIABLES LIKE "secure_file_priv";
 -- Game ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create ElectionTweets' as '';
-
-
-
--- create table ElectionTweets (state char(14),
--- 							county char(25),
---                             candidate char(40),
---                             party char(4),
---                             votes, 
---                             won
 
 create table ElectionTweets (tweetID BIGINT not null,
 							tweet varchar(1960) not null,
