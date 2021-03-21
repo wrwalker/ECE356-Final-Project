@@ -1,4 +1,3 @@
-use Election;
 drop table if exists ElectionTweets;
 -- ElectionTweets ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
@@ -6,10 +5,10 @@ select 'Create ElectionTweets' as '';
 
 create table ElectionTweets (tweetID BIGINT not null,
 							tweet varchar(1960) not null,
-                            likes int,
-                            retweetCount int,
-                            userID BIGINT not null,
-                            userFollowersCount int,
+                            likes int unsigned,
+                            retweetCount int unsigned,
+                            userID BIGINT unsigned not null,
+                            userFollowersCount int unsigned,
                             city varchar(255),
                             country char(30) not null CHECK (country <> ''),
                             stateCode char(4) not null CHECK (stateCode <> ''),
