@@ -7,7 +7,6 @@ create table VotesByCounty
 (
     state         char(20)     not null,
     county        char(30)     not null,
-    currentVotes int unsigned not null,
     totalVotes    int unsigned not null,
     percent       int unsigned,
     level         char,
@@ -22,7 +21,7 @@ load data infile '/var/lib/mysql-files/ece356/us-election-2020/governors_county.
     ignore 1 lines (
                     state,
                     county,
-                    currentVotes,
+                    @throwAway,
                     totalVotes,
                     percent,
                     @level)
@@ -36,7 +35,7 @@ load data infile '/var/lib/mysql-files/ece356/us-election-2020/president_county.
     ignore 1 lines (
                     state,
                     county,
-                    currentVotes,
+                    @throwAway,
                     totalVotes,
                     percent,
                     @level)
@@ -50,7 +49,7 @@ load data infile '/var/lib/mysql-files/ece356/us-election-2020/senate_county.csv
     ignore 1 lines (
                     state,
                     county,
-                    currentVotes,
+                    @throwAway,
                     totalVotes,
                     percent,
                     @level)
