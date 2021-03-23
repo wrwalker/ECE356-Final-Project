@@ -1,18 +1,19 @@
-use Election;
 drop table if exists ElectionTweets;
 -- ElectionTweets ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create ElectionTweets' as '';
 
 create table ElectionTweets (tweetID BIGINT not null,
-							tweet varchar(1960) not null,
-                            likes int,
-                            retweetCount int,
-                            userID BIGINT not null,
-                            userFollowersCount int,
+							tweet varchar(1960) not null CHECK (tweet <> ''),
+                            likes int unsigned,
+                            retweetCount int unsigned,
+                            userID BIGINT unsigned not null,
+                            userFollowersCount int unsigned,
+                            latitude decimal(25, 20) not null CHECK (latitude <> ''),
+                            longitude decimal(25, 20) not null CHECK (longitude <> ''),
                             city varchar(255),
-                            country char(30) not null CHECK (country <> ''),
-                            stateCode char(4) not null CHECK (stateCode <> ''),
+                            country char(30),
+                            stateCode char(4),
                             trumpOrBiden char(1) not null,
                             sentimentScore decimal(5, 2),
                             primary key (tweetID));
@@ -35,8 +36,8 @@ load data infile '/var/lib/mysql-files/ece356/election-tweets/hashtag_donaldtrum
      @throwAway,
      userFollowersCount,
      @throwAway,
-     @throwAway,
-     @throwAway,
+     latitude,
+     longitude,
      city,
      country,
      @throwAway,
@@ -64,8 +65,8 @@ load data infile '/var/lib/mysql-files/ece356/election-tweets/hashtag_joebiden.c
      @throwAway,
      userFollowersCount,
      @throwAway,
-     @throwAway,
-     @throwAway,
+     latitude,
+     longitude,
      city,
      country,
      @throwAway,
