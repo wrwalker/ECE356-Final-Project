@@ -12,6 +12,9 @@ datasets/hashtag_*
 # IDEA Stuff
 .idea
 
+# Mac shit
+.DS_Store
+
 # Distribution / packaging
 .Python
 build/
