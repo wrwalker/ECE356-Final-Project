@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# largeDatasets
+datasets/hashtag_*
+
 # C extensions
 *.so
 

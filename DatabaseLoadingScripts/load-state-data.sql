@@ -12,7 +12,7 @@ create table VotesByState
 );
 
 -- Governor by State ------------------
-load data infile '/var/lib/mysql-files/ece356/us-election-2020/governors_state.csv' ignore into table VotesByState
+load data infile '/var/lib/mysql-files/datasets/governors_state.csv' ignore into table VotesByState
     fields terminated by ','
     enclosed by '"'
     lines terminated by '\n'
@@ -23,7 +23,7 @@ load data infile '/var/lib/mysql-files/ece356/us-election-2020/governors_state.c
     set level = 'G';
 
 -- Presidential by State ------------------
-load data infile '/var/lib/mysql-files/ece356/us-election-2020/president_state.csv' ignore into table VotesByState
+load data infile '/var/lib/mysql-files/datasets/president_state.csv' ignore into table VotesByState
     fields terminated by ','
     enclosed by '"'
     lines terminated by '\n'
@@ -34,7 +34,7 @@ load data infile '/var/lib/mysql-files/ece356/us-election-2020/president_state.c
     set level = 'P';
 
 -- Senate by State ------------------
-load data infile '/var/lib/mysql-files/ece356/us-election-2020/senate_state.csv' ignore into table VotesByState
+load data infile '/var/lib/mysql-files/datasets/senate_state.csv' ignore into table VotesByState
     fields terminated by ','
     enclosed by '"'
     lines terminated by '\n'

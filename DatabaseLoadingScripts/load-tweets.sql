@@ -21,7 +21,7 @@ create table ElectionTweets
     primary key (tweetID)
 );
 
-load data infile '/var/lib/mysql-files/ece356/election-tweets/hashtag_donaldtrump.csv' ignore into table ElectionTweets
+load data infile '/var/lib/mysql-files/datasets/hashtag_donaldtrump.csv' ignore into table ElectionTweets
     fields terminated by ','
     enclosed by '"'
     lines terminated by '\n'
@@ -50,7 +50,7 @@ load data infile '/var/lib/mysql-files/ece356/election-tweets/hashtag_donaldtrum
                     @TrumpOrBiden)
     set trumpOrBiden = 'T';
 
-load data infile '/var/lib/mysql-files/ece356/election-tweets/hashtag_joebiden.csv' ignore into table ElectionTweets
+load data infile '/var/lib/mysql-files/datasets/hashtag_joebiden.csv' ignore into table ElectionTweets
     fields terminated by ','
     enclosed by '"'
     lines terminated by '\n'
