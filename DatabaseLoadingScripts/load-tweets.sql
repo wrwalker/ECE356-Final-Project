@@ -11,14 +11,10 @@ create table ElectionTweets
     retweetCount       int unsigned,
     userID             BIGINT unsigned not null,
     userFollowersCount int unsigned,
-    latitude           decimal(25, 20) not null CHECK (latitude <> ''),
-    longitude          decimal(25, 20) not null CHECK (longitude <> ''),
-    city               varchar(255),
-    country            char(30),
-    stateCode          char(4),
     trumpOrBiden       char(1)         not null,
     sentimentScore     decimal(5, 2),
-    primary key (tweetID)
+    primary key (tweetID),
+    foreign key (tweetID) references Location (tweetID)
 );
 
 load data infile '/var/lib/mysql-files/datasets/hashtag_donaldtrump.csv' ignore into table ElectionTweets
@@ -39,13 +35,13 @@ load data infile '/var/lib/mysql-files/datasets/hashtag_donaldtrump.csv' ignore 
                     @throwAway,
                     userFollowersCount,
                     @throwAway,
-                    latitude,
-                    longitude,
-                    city,
-                    country,
                     @throwAway,
                     @throwAway,
-                    stateCode,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
                     @throwAway,
                     @TrumpOrBiden)
     set trumpOrBiden = 'T';
@@ -68,13 +64,13 @@ load data infile '/var/lib/mysql-files/datasets/hashtag_joebiden.csv' ignore int
                     @throwAway,
                     userFollowersCount,
                     @throwAway,
-                    latitude,
-                    longitude,
-                    city,
-                    country,
                     @throwAway,
                     @throwAway,
-                    stateCode,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
                     @throwAway,
                     @TrumpOrBiden)
     set trumpOrBiden = 'B';
