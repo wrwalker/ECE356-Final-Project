@@ -1,38 +1,32 @@
-drop table if exists ElectionTweets;
--- ElectionTweets ------------------------------------------------------------------------
+drop table if exists User;
+-- User ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
-select 'Create ElectionTweets' as '';
+select 'Create User' as '';
 
-create table ElectionTweets
+create table User
 (
-    tweetID        BIGINT          not null,
-    tweet          varchar(1960)   not null CHECK (tweet <> ''),
-    likes          int unsigned,
-    retweetCount   int unsigned,
-    userID         BIGINT unsigned not null,
-    trumpOrBiden   char(1)         not null,
-    sentimentScore decimal(5, 2),
-    primary key (tweetID),
-    foreign key (tweetID) references Location (tweetID),
-    foreign key (userID) references User (userID)
+    userID             BIGINT unsigned not null,
+    userFollowersCount int unsigned,
+    primary key (userID)
 );
 
-load data infile '/var/lib/mysql-files/datasets/hashtag_donaldtrump.csv' ignore into table ElectionTweets
+load data infile '/var/lib/mysql-files/datasets/hashtag_donaldtrump.csv' ignore into table User
     fields terminated by ','
     enclosed by '"'
     lines terminated by '\n'
     ignore 1 lines (
                     @throwAway,
-                    tweetID,
-                    tweet,
-                    likes,
-                    retweetCount,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
                     @throwAway,
                     userID,
                     @throwAway,
                     @throwAway,
                     @throwAway,
                     @throwAway,
+                    userFollowersCount,
                     @throwAway,
                     @throwAway,
                     @throwAway,
@@ -41,27 +35,25 @@ load data infile '/var/lib/mysql-files/datasets/hashtag_donaldtrump.csv' ignore 
                     @throwAway,
                     @throwAway,
                     @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @TrumpOrBiden)
-    set trumpOrBiden = 'T';
+                    @throwAway);
 
-load data infile '/var/lib/mysql-files/datasets/hashtag_joebiden.csv' ignore into table ElectionTweets
+load data infile '/var/lib/mysql-files/datasets/hashtag_joebiden.csv' ignore into table User
     fields terminated by ','
     enclosed by '"'
     lines terminated by '\n'
     ignore 1 lines (
                     @throwAway,
-                    tweetID,
-                    tweet,
-                    likes,
-                    retweetCount,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
+                    @throwAway,
                     @throwAway,
                     userID,
                     @throwAway,
                     @throwAway,
                     @throwAway,
                     @throwAway,
+                    userFollowersCount,
                     @throwAway,
                     @throwAway,
                     @throwAway,
@@ -70,7 +62,4 @@ load data infile '/var/lib/mysql-files/datasets/hashtag_joebiden.csv' ignore int
                     @throwAway,
                     @throwAway,
                     @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @TrumpOrBiden)
-    set trumpOrBiden = 'B';
+                    @throwAway);
