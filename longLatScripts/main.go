@@ -16,7 +16,14 @@ const dir = "./datasets/"
 
 var files = []string{dir + "hashtag_joebiden.csv", dir + "hashtag_donaldtrump.csv"}
 
-const waitTime = time.Millisecond * 50
+const waitTime = time.Millisecond * 20
+const totalRecords = 1747800.0
+
+var recordsProcessed = 0;
+var misses = 0;
+
+//time to completion ~=
+//1747800*(100/1000)/60/60 ~=5.5h
 
 type results struct {
 	state_name  string
@@ -41,6 +48,7 @@ func getCountyAndState(lat, long string) (county, state string, ok bool) {
 	}
 
 	if len(apiResponse["results"]) <1{
+		misses +=1
 		return "","",false
 	}
 
@@ -107,11 +115,11 @@ func main() {
 			columnNamesToIndex[columnName] = i
 		}
 
-		recordsProcessed := 0
+
 		for {
 			time.Sleep(waitTime)
 			// Read each record from csv
-			record, err := r.Read()
+			_, err := r.Read()
 			if err == io.EOF {
 				break
 			}
@@ -131,7 +139,7 @@ func main() {
 			}
 			recordsProcessed +=1
 			if recordsProcessed % 100 == 0{
-				log.Println(fmt.Sprintf("%d/%d rows handled(%d%%)\n", recordsProcessed, ,))
+				log.Println(fmt.Sprintf("%d/%v rows handled(%v%%) with %d misses and on file:%s\n", recordsProcessed, totalRecords, float64(recordsProcessed)/totalRecords*float64(100), misses, file))
 			}
 		}
 	}
