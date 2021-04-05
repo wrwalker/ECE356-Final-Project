@@ -1,3 +1,6 @@
+SET foreign_key_checks = 0;
+drop table if exists User;
+SET foreign_key_checks = 1;
 -- User ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create User' as '';
