@@ -1,4 +1,3 @@
-drop table if exists VotesByCounty;
 -- VotesByCounty ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create VotesByCounty' as '';

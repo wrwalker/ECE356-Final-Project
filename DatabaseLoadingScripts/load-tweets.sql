@@ -1,4 +1,3 @@
-drop table if exists ElectionTweets;
 -- ElectionTweets ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create ElectionTweets' as '';

@@ -1,6 +1,3 @@
-SET foreign_key_checks = 0;
-drop table if exists Location;
-SET foreign_key_checks = 1;
 -- Location ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create Location' as '';
