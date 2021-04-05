@@ -31,7 +31,7 @@ load data infile '/var/lib/mysql-files/datasets/governors_county_candidate.csv' 
                     @won,
                     @level)
     set level = 'G',
-        won = if(@level = 'True', true, false);
+        won = if(@won = 'True', true, false);
 
 -- Presidential by County ------------------
 load data infile '/var/lib/mysql-files/datasets/president_county_candidate.csv' ignore into table VotesByCountyCandidate
@@ -47,7 +47,7 @@ load data infile '/var/lib/mysql-files/datasets/president_county_candidate.csv' 
                     @won,
                     @level)
     set level = 'P',
-        won = if(@level = 'True', true, false);
+        won = if(@won = 'True', true, false);
 
 -- Senate by County ------------------
 load data infile '/var/lib/mysql-files/datasets/senate_county_candidate.csv' ignore into table VotesByCountyCandidate
@@ -63,4 +63,4 @@ load data infile '/var/lib/mysql-files/datasets/senate_county_candidate.csv' ign
                     @won,
                     @level)
     set level = 'S',
-        won = if(@level = 'True', true, false);
+        won = if(@won = 'True', true, false);
