@@ -1,3 +1,6 @@
+SET foreign_key_checks = 0;
+drop table if exists VotesByCounty;
+SET foreign_key_checks = 1;
 -- VotesByCounty ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create VotesByCounty' as '';

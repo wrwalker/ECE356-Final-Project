@@ -1,3 +1,6 @@
+SET foreign_key_checks = 0;
+drop table if exists VotesByCountyCandidate;
+SET foreign_key_checks = 1;
 -- VotesByCountyCandidate ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create VotesByCountyCandidate' as '';
@@ -11,7 +14,7 @@ create table VotesByCountyCandidate
     votes     int unsigned not null,
     won       bool         not null,
     level     char         not null,
-    primary key (state, county, level)
+    primary key (state, county, candidate, level)
 );
 
 -- Governor by County ------------------

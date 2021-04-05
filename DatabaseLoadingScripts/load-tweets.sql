@@ -1,3 +1,6 @@
+SET foreign_key_checks = 0;
+drop table if exists ElectionTweets;
+SET foreign_key_checks = 1;
 -- ElectionTweets ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create ElectionTweets' as '';
