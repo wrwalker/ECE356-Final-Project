@@ -116,6 +116,7 @@ func main() {
 			columnNamesToIndex[columnName] = i
 		}
 
+		timeStart := time.Now()
 
 		for {
 			time.Sleep(waitTime)
@@ -139,8 +140,10 @@ func main() {
 				}
 			}
 			recordsProcessed +=1
+			timePerRecord := float64(time.Since(timeStart).Milliseconds())/float64(recordsProcessed)
+			eta:= timePerRecord * float64(totalRecords-recordsProcessed) / float64(time.Hour.Milliseconds())
 			if recordsProcessed % 100 == 0{
-				log.Println(fmt.Sprintf("%d/%d rows handled(%v%%) with %d misses and on file:%s\n", recordsProcessed, int64(totalRecords), float64(recordsProcessed)/totalRecords*float64(100), misses, file))
+				log.Println(fmt.Sprintf("%d/%d rows handled(%.2f%%) with %d misses and on file:%s ETA: %.2f hours \n", recordsProcessed, int64(totalRecords), float64(recordsProcessed)/totalRecords*float64(100), misses, file, eta))
 			}
 		}
 	}
