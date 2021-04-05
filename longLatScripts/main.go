@@ -23,7 +23,7 @@ var recordsProcessed = 0;
 var misses = 0;
 
 //time to completion ~=
-//1747800*(100/1000)/60/60 ~=5.5h
+//1747800*(20/1000)/60/60 ~=9.7h
 
 type results struct {
 	state_name  string
@@ -67,6 +67,7 @@ func getCountyAndState(lat, long string) (county, state string, ok bool) {
 
 	//fmt.Printf("%v %v", respStruct["county_name"].(string), respStruct["state_name"].(string))
 	return respStruct["county_name"].(string), respStruct["state_name"].(string), true
+	//return "","",false
 }
 
 // decoding a large json wirespMapll actually be slower than converting to a string and parsing the string
@@ -119,7 +120,7 @@ func main() {
 		for {
 			time.Sleep(waitTime)
 			// Read each record from csv
-			_, err := r.Read()
+			record, err := r.Read()
 			if err == io.EOF {
 				break
 			}
@@ -139,7 +140,7 @@ func main() {
 			}
 			recordsProcessed +=1
 			if recordsProcessed % 100 == 0{
-				log.Println(fmt.Sprintf("%d/%v rows handled(%v%%) with %d misses and on file:%s\n", recordsProcessed, totalRecords, float64(recordsProcessed)/totalRecords*float64(100), misses, file))
+				log.Println(fmt.Sprintf("%d/%d rows handled(%v%%) with %d misses and on file:%s\n", recordsProcessed, int64(totalRecords), float64(recordsProcessed)/totalRecords*float64(100), misses, file))
 			}
 		}
 	}
