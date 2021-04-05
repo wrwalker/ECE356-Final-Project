@@ -1,4 +1,3 @@
-drop table if exists VotesByState;
 -- VotesByState ------------------------------------------------------------------------
 select '-----------------------------------------------------------------' as '';
 select 'Create VotesByState' as '';
