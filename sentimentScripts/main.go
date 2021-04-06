@@ -11,7 +11,7 @@ import (
 )
 
 
-const dir = "./datasets/"
+const dir = "../datasets/"
 
 var files = []string{dir + "hashtag_joebiden.csv", dir + "hashtag_donaldtrump.csv"}
 
@@ -29,10 +29,11 @@ func getSentiment(tweetContent string)(retSentimentAsInt int, retSentimentAsFloa
 	}
 	analysis := model.SentimentAnalysis(tweetContent, sentiment.English)
 
+	// summing method isn't as accurate
 	sum := float64(0)
-	for _, word := range analysis.Words{
-		sum += float64(word.Score)
-	}
+	//for _, word := range analysis.Words{
+	//	sum += float64(word.Score)
+	//}
 	return int(analysis.Score), sum/float64(len(analysis.Words)), true
 }
 
@@ -91,23 +92,24 @@ func main() {
 			tweetID := record[columnNamesToIndex["tweet_id"]]
 			tweetContent := record[columnNamesToIndex["tweet"]]
 
-			sentimentInt, sentimentFloat, ok := getSentiment(tweetContent)
+			sentimentInt, _, ok := getSentiment(tweetContent)
 			if ok {
-				isCorrect := "correct"
-				if sentimentInt ==1 && sentimentFloat >= 0.5{
-					isCorrect = "correct"
-				} else {
-					isCorrect = "wrong"
-				}
-				log.Println(fmt.Sprintf("%s %s,%s,%d,%.2f\n",isCorrect, tweetID,nameList[dex],sentimentInt, sentimentFloat))
-				//f.WriteString(fmt.Sprintf("%s,%s,%d\n",tweetID,nameList[dex],sentiment))
+				//isCorrect := "correct"
+				//if sentimentInt ==1 && sentimentFloat >= 0.5{
+				//	isCorrect = "correct"
+				//} else {
+				//	isCorrect = "wrong"
+				//}
+				//log.Println(fmt.Sprintf("%s %s,%s,%d,%.2f\n",isCorrect, tweetID,nameList[dex],sentimentInt, sentimentFloat))
+
+				f.WriteString(fmt.Sprintf("%s,%s,%d\n",tweetID,nameList[dex],sentimentInt))
 			}
 
 			recordsProcessed +=1
 			timePerRecord := float64(time.Since(timeStart).Milliseconds())/float64(recordsProcessed)
 			eta:= timePerRecord * float64(totalRecords-recordsProcessed) / float64(time.Hour.Milliseconds())
 			if recordsProcessed % 100 == 0{
-				log.Println(fmt.Sprintf("%d/%d rows handled(%.2f%%) with %d misses and on file:%s ETA: %.2f hours \n", recordsProcessed, int64(totalRecords), float64(recordsProcessed)/totalRecords*float64(100), misses, file, eta))
+				log.Println(fmt.Sprintf("%d/%d rows handled(%.2f%%) and on file:%s ETA: %.2f hours \n", recordsProcessed, int64(totalRecords), float64(recordsProcessed)/totalRecords*float64(100), file, eta))
 			}
 		}
 	}
