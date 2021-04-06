@@ -13,9 +13,9 @@ create table ElectionTweets
     retweetCount   int unsigned,
     userID         BIGINT unsigned not null,
     trumpOrBiden   char(1)         not null,
-    sentimentScore decimal(5, 2),
     primary key (tweetID),
     foreign key (tweetID) references Location (tweetID),
+    foreign key (tweetID) references Sentiment (tweetID),
     foreign key (userID) references User (userID)
 );
 
