@@ -25,11 +25,6 @@ var misses = 0;
 //time to completion ~=
 //1747800*(20/1000)/60/60 ~=9.7h
 
-type results struct {
-	state_name  string
-	county_name string
-}
-
 func getCountyAndState(lat, long string) (county, state string, ok bool) {
 	strQuery := fmt.Sprintf("https://geo.fcc.gov/api/census/area?lat=%s&lon=%s&format=json", lat, long)
 	res, err := http.Get(strQuery)
@@ -70,12 +65,8 @@ func getCountyAndState(lat, long string) (county, state string, ok bool) {
 	//return "","",false
 }
 
-// decoding a large json wirespMapll actually be slower than converting to a string and parsing the string
-func simpleParse() {
-
-}
-
 func main() {
+	timeStart := time.Now()
 	for _, file := range files {
 		log.Println(fmt.Sprintf("starting file: %s", file))
 		columnNamesToIndex := make(map[string]int)
@@ -115,8 +106,6 @@ func main() {
 		for i, columnName := range record {
 			columnNamesToIndex[columnName] = i
 		}
-
-		timeStart := time.Now()
 
 		for {
 			time.Sleep(waitTime)
