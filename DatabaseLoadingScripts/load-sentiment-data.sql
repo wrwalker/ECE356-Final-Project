@@ -7,42 +7,18 @@ select 'Create Sentiment' as '';
 
 create table Sentiment
 (
-    tweetID        BIGINT          not null,
-    tweet          varchar(1960)   not null CHECK (tweet <> ''),
-    likes          int unsigned,
-    retweetCount   int unsigned,
-    userID         BIGINT unsigned not null,
-    trumpOrBiden   char(1)         not null,
+    tweetID        BIGINT  not null,
+    trumpOrBiden   char(1) not null,
     sentimentScore bool,
-    primary key (tweetID),
-    foreign key (tweetID) references Location (tweetID),
-    foreign key (userID) references User (userID)
+    primary key (tweetID)
 );
 
-load data infile '/var/lib/mysql-files/datasets/hashtag_donaldtrump.csv' ignore into table Sentiment
+load data infile '/var/lib/mysql-files/datasets/new_sentiment.csv' ignore into table Sentiment
     fields terminated by ','
     enclosed by '"'
     lines terminated by '\n'
     ignore 1 lines (
-                    @throwAway,
                     tweetID,
-                    tweet,
-                    likes,
-                    retweetCount,
-                    @throwAway,
-                    userID,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @throwAway,
-                    @TrumpOrBiden);
+                    @trumpOrBiden,
+                    sentimentScore)
+    set trumpOrBiden = if(@trumpOrBiden = 'b', 'B', 'T');
