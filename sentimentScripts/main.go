@@ -17,6 +17,7 @@ const dir = "../datasets/"
 var files = []string{dir + "hashtag_joebiden.csv", dir + "hashtag_donaldtrump.csv"}
 
 const totalRecords = 1747800.0
+const maxGoRoutines = 500
 
 var recordsProcessed = 0;
 var misses = 0;
@@ -67,6 +68,7 @@ func main() {
 	f.WriteString(fmt.Sprintf("tweetID,trump_or_biden,sentiment_score\n"))
 
 	wg := sync.WaitGroup{}
+	sem := make(chan struct{}, maxGoRoutines)
 
 	go func() {
 		counter := -1;
@@ -113,9 +115,13 @@ func main() {
 					return
 				}
 
+				sem <- struct{}{}
 				go func(tweetID, tweetContent string) {
 					wg.Add(1)
 					defer wg.Done()
+					defer func() {
+						<- sem
+					}()
 					sentimentInt, _, _ := getSentiment(tweetContent)
 
 					//isCorrect := "correct"
