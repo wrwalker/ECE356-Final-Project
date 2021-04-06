@@ -17,7 +17,7 @@ const dir = "../datasets/"
 var files = []string{dir + "hashtag_joebiden.csv", dir + "hashtag_donaldtrump.csv"}
 
 const totalRecords = 1747800.0
-const maxGoRoutines = 500
+const maxGoRoutines = 50
 
 var recordsProcessed = 0;
 var misses = 0;
@@ -102,18 +102,21 @@ func main() {
 				record, err := r.Read()
 				if err == io.EOF {
 					wg.Wait()
-					exitChan <- 1;
-					return
+					if dex == 1{
+						exitChan <- 1;
+						return
+					}
+					break
 				}
 
 				counter +=1
 
 				//TODO comment out if you want to do > 50 line csv output
-				if counter >= 50{
-					wg.Wait()
-					exitChan <-1
-					return
-				}
+				//if counter >= 50{
+				//	wg.Wait()
+				//	exitChan <-1
+				//	return
+				//}
 
 				sem <- struct{}{}
 				go func(tweetID, tweetContent string) {
