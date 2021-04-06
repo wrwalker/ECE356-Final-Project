@@ -7,6 +7,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"sync"
 	"time"
 )
 
@@ -37,51 +38,51 @@ func getSentiment(tweetContent string)(retSentimentAsInt int, retSentimentAsFloa
 	return int(analysis.Score), sum/float64(len(analysis.Words)), true
 }
 
+type tweet struct {
+	sentimentScore int
+	tweetID string
+	person string
+}
+
 func main() {
+	tweetChan := make(chan *tweet)
+	exitChan := make(chan int)
 
 	timeStart := time.Now()
-	for dex, file := range files {
-		log.Println(fmt.Sprintf("starting file: %s", file))
-		columnNamesToIndex := make(map[string]int)
 
-		// write file headers
-		path := dir+"new_sentiment.csv"
-		err := os.Remove(path)
-		if err != nil {
-			//log.Fatal("couldn't delete file")
-			//return
-		}
+	// write file headers
+	path := dir+"new_sentiment.csv"
+	err := os.Remove(path)
+	if err != nil {
+		//log.Fatal("couldn't delete file")
+		//return
+	}
 
-		f, err := os.Create(path)
-		if err != nil {
-			log.Fatal("couldn't write file")
-			return
-		}
-		defer f.Close()
-		f.WriteString(fmt.Sprintf("tweetID,trump_or_biden,sentiment_score\n"))
+	f, err := os.Create(path)
+	if err != nil {
+		log.Fatal("couldn't write file")
+		return
+	}
+	defer f.Close()
+	f.WriteString(fmt.Sprintf("tweetID,trump_or_biden,sentiment_score\n"))
 
-		// open file
-		csvFile, err := os.Open(file)
-		if err != nil {
-			log.Fatal("couldn't open file: " + file)
-			return
-		}
-		r := csv.NewReader(csvFile)
+	wg := sync.WaitGroup{}
 
-		// load up columnNamesToIndex
-		record, err := r.Read()
-		if err == io.EOF {
-			break
-		}
-		if err != nil {
-			log.Fatal(err)
-		}
-		for i, columnName := range record {
-			columnNamesToIndex[columnName] = i
-		}
+	go func() {
+		counter := -1;
+		for dex, file := range files {
+			log.Println(fmt.Sprintf("starting file: %s", file))
+			columnNamesToIndex := make(map[string]int)
 
-		for {
-			// Read each record from csv
+			// open file
+			csvFile, err := os.Open(file)
+			if err != nil {
+				log.Fatal("couldn't open file: " + file)
+				return
+			}
+			r := csv.NewReader(csvFile)
+
+			// load up columnNamesToIndex
 			record, err := r.Read()
 			if err == io.EOF {
 				break
@@ -89,28 +90,71 @@ func main() {
 			if err != nil {
 				log.Fatal(err)
 			}
-			tweetID := record[columnNamesToIndex["tweet_id"]]
-			tweetContent := record[columnNamesToIndex["tweet"]]
-
-			sentimentInt, _, ok := getSentiment(tweetContent)
-			if ok {
-				//isCorrect := "correct"
-				//if sentimentInt ==1 && sentimentFloat >= 0.5{
-				//	isCorrect = "correct"
-				//} else {
-				//	isCorrect = "wrong"
-				//}
-				//log.Println(fmt.Sprintf("%s %s,%s,%d,%.2f\n",isCorrect, tweetID,nameList[dex],sentimentInt, sentimentFloat))
-
-				f.WriteString(fmt.Sprintf("%s,%s,%d\n",tweetID,nameList[dex],sentimentInt))
+			for i, columnName := range record {
+				columnNamesToIndex[columnName] = i
 			}
+
+
+			for {
+				// Read each record from csv
+				record, err := r.Read()
+				if err == io.EOF {
+					wg.Wait()
+					exitChan <- 1;
+					return
+				}
+
+				counter +=1
+
+				//TODO comment out if you want to do > 50 line csv output
+				if counter >= 50{
+					wg.Wait()
+					exitChan <-1
+					return
+				}
+
+				go func(tweetID, tweetContent string) {
+					wg.Add(1)
+					defer wg.Done()
+					sentimentInt, _, _ := getSentiment(tweetContent)
+
+					//isCorrect := "correct"
+					//if sentimentInt ==1 && sentimentFloat >= 0.5{
+					//	isCorrect = "correct"
+					//} else {
+					//	isCorrect = "wrong"
+					//}
+					//log.Println(fmt.Sprintf("%s %s,%s,%d,%.2f\n",isCorrect, tweetID,nameList[dex],sentimentInt, sentimentFloat))
+
+					tc := &tweet{
+						sentimentScore:sentimentInt,
+						tweetID:tweetID,
+						person: nameList[dex],
+					}
+
+					tweetChan <-tc
+					return
+				}(record[columnNamesToIndex["tweet_id"]], record[columnNamesToIndex["tweet"]])
+			}
+		}
+		return
+	}()
+
+	for {
+		select {
+		case incomingTweet := <-tweetChan:
+			f.WriteString(fmt.Sprintf("%s,%s,%d\n",incomingTweet.tweetID,incomingTweet.person,incomingTweet.sentimentScore))
 
 			recordsProcessed +=1
 			timePerRecord := float64(time.Since(timeStart).Milliseconds())/float64(recordsProcessed)
 			eta:= timePerRecord * float64(totalRecords-recordsProcessed) / float64(time.Hour.Milliseconds())
-			if recordsProcessed % 100 == 0{
-				log.Println(fmt.Sprintf("%d/%d rows handled(%.2f%%) and on file:%s ETA: %.2f hours \n", recordsProcessed, int64(totalRecords), float64(recordsProcessed)/totalRecords*float64(100), file, eta))
+			if recordsProcessed % 10 == 0{
+				log.Println(fmt.Sprintf("%d/%d rows handled(%.2f%%) ETA: %.2f hours \n", recordsProcessed, int64(totalRecords), float64(recordsProcessed)/totalRecords*float64(100), eta))
 			}
+		case <- exitChan:
+			close(exitChan)
+			close(tweetChan)
+			return
 		}
 	}
 }
