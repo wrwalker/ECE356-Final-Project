@@ -14,32 +14,31 @@ type VotesByState struct {
 	level      string   `json:"totalVotes"`
 }
 
-//TODO: Make a database object struct that we can pass around and shit
-
-//TODO: Make an interface with all our methods
-
-//TODO: Make a connect method
-func connectToDB() {
-
+// DBConnector interface
+type DBConnector interface {
+	Close() error
+	Query(query string, args ...interface{}) (*sql.Rows, error)
 }
 
-func main() {
+// CLI struct{db dbInterface, sql }
+type CLI struct {
+	db DBConnector
+	//sql SQLDriver
+}
+
+
+func (c *CLI)connectToDB()(DBConnector, error) {
 	fmt.Println("------------ 2020 Elections Sentiment Analysis Results Database ------------")
 	fmt.Println("Connecting to DB...")
 
-	//TODO: Move all this shit out of here into a func
 	connString := "root:root@tcp(127.0.0.1:3307)/Election"
-	db, err := sql.Open("mysql", connString)
-	defer db.Close()
+	return sql.Open("mysql", connString)
+}
 
+func (c *CLI)DoQuery(input string)(*sql.Rows, error){
+	results, err := c.db.Query(input)
 	if err != nil {
-		fmt.Println("Failed to connect to DB! Panik")
-		panic(err.Error())
-	}
-	fmt.Println("Success")
-
-	results, err := db.Query("SELECT * FROM VotesByState")
-	if err != nil {
+		return nil, err
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
 
@@ -56,4 +55,28 @@ func main() {
 		log.Printf(votesByState.level)
 		log.Println()
 	}
+	return nil, nil
+}
+
+func NewCLI(dbs ...DBConnector) *CLI{
+	cli := &CLI{}
+
+	if len(dbs) > 0 {
+		cli.db = dbs[0]
+	} else {
+		db, err := cli.connectToDB()
+		if err != nil {
+			fmt.Println("Failed to connect to DB! Panik")
+			panic(err.Error())
+		}
+		cli.db = db
+	}
+	return cli
+}
+
+func main() {
+	cli := NewCLI()
+	defer cli.db.Close()
+
+
 }
