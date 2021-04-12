@@ -11,7 +11,7 @@ import (
 type VotesByState struct {
 	state      string `json:"state"`
 	totalVotes int    `json:"totalVotes"`
-	level      string   `json:"totalVotes"`
+	level      string `json:"totalVotes"`
 }
 
 // DBConnector interface
@@ -20,14 +20,12 @@ type DBConnector interface {
 	Query(query string, args ...interface{}) (*sql.Rows, error)
 }
 
-// CLI struct{db dbInterface, sql }
-type CLI struct {
+// QueryMaker struct{db dbInterface, sql }
+type QueryMaker struct {
 	db DBConnector
-	//sql SQLDriver
 }
 
-
-func (c *CLI)connectToDB()(DBConnector, error) {
+func (q *QueryMaker) connectToDB() (DBConnector, error) {
 	fmt.Println("------------ 2020 Elections Sentiment Analysis Results Database ------------")
 	fmt.Println("Connecting to DB...")
 
@@ -35,17 +33,20 @@ func (c *CLI)connectToDB()(DBConnector, error) {
 	return sql.Open("mysql", connString)
 }
 
-func (c *CLI)DoQuery(input string)(*sql.Rows, error){
-	results, err := c.db.Query(input)
+func (q *QueryMaker) DoQuery(input string) (*sql.Rows, error) {
+	results, err := q.db.Query(input)
 	if err != nil {
+		log.Printf("error doing query %q: %s", input, err.Error())
 		return nil, err
-		panic(err.Error()) // proper error handling instead of panic in your app
 	}
+	return results, nil
+}
 
-	for results.Next() {
+func DeserializeRows(r *sql.Rows) error {
+	for r.Next() {
 		var votesByState VotesByState
 		// for each row, scan the result into our votesByState composite object
-		err = results.Scan(&votesByState.state, &votesByState.totalVotes, &votesByState.level)
+		err := r.Scan(&votesByState.state, &votesByState.totalVotes, &votesByState.level)
 		if err != nil {
 			panic(err.Error()) // proper error handling instead of panic in your app
 		}
@@ -55,28 +56,29 @@ func (c *CLI)DoQuery(input string)(*sql.Rows, error){
 		log.Printf(votesByState.level)
 		log.Println()
 	}
-	return nil, nil
+	return nil
 }
 
-func NewCLI(dbs ...DBConnector) *CLI{
-	cli := &CLI{}
+func NewQueryMaker(dbs ...DBConnector) *QueryMaker {
+	qm := &QueryMaker{}
 
-	if len(dbs) > 0 {
-		cli.db = dbs[0]
+	if len(dbs) > 0 { // use optional dbConnector for testing
+		qm.db = dbs[0]
 	} else {
-		db, err := cli.connectToDB()
+		db, err := qm.connectToDB()
 		if err != nil {
-			fmt.Println("Failed to connect to DB! Panik")
-			panic(err.Error())
+			log.Fatalf("Could not connect to DB: %s", err.Error())
 		}
-		cli.db = db
+		qm.db = db
 	}
-	return cli
+	return qm
 }
 
 func main() {
-	cli := NewCLI()
-	defer cli.db.Close()
+	qm := NewQueryMaker()
+	defer qm.db.Close()
 
+	res, _ := qm.DoQuery("SELECT * FROM VotesByState")
+	DeserializeRows(res)
 
 }
