@@ -30,26 +30,6 @@ func (q *QueryMaker) DoQuery(input string) (*sql.Rows, error) {
 	return results, nil
 }
 
-func DeserializeRows(r *sql.Rows) ([]map[string]interface{}, []string, error) {
-	var allRows []map[string]interface{}
-	var colHeaders []string
-	for r.Next() {
-		results := make(map[string]interface{})
-
-		err := r.MapScan(results) // this can cause errors with non-fully qualified names
-		if err != nil {
-			panic(err.Error()) // proper error handling instead of panic in your app
-		}
-
-		colHeaders, err = r.Columns()
-		if err != nil {
-			panic(err.Error()) // proper error handling instead of panic in your app
-		}
-		allRows = append(allRows, results)
-	}
-	return allRows, colHeaders, nil
-}
-
 func NewQueryMaker(dbs ...dbConnector.DBConnector) *QueryMaker {
 	qm := &QueryMaker{}
 

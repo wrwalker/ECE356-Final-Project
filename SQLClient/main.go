@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"github.com/ECE356-Final-Project/SQLClient/internal/queryMaker"
+	"github.com/ECE356-Final-Project/SQLClient/internal/utils"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -11,12 +11,6 @@ func main() {
 	defer qm.Db.Close()
 
 	res, _ := qm.DoQuery("SELECT * FROM VotesByState")
-	rows, colNames, _ := queryMaker.DeserializeRows(res) //use this so order is deterministic
-	for _, row := range rows {
-		for _, k := range colNames {
-			fmt.Printf("%s: %s, ", k, row[k])
-		}
-		fmt.Println()
-	}
-
+	rows, colNames, _ := utils.DeserializeRowsToMappedInterface(res)
+	utils.PrintMap(rows, colNames)
 }
