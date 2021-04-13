@@ -1,18 +1,18 @@
 package queryMaker
 
 import (
-	"database/sql"
 	"fmt"
 	"github.com/ECE356-Final-Project/SQLClient/internal/dbConnector"
 	_ "github.com/go-sql-driver/mysql"
+	sql "github.com/jmoiron/sqlx"
 	"log"
 )
 
 // STRUCTURES:
 type VotesByState struct {
-	state      string `json:"state"`
-	totalVotes int    `json:"totalVotes"`
-	level      string `json:"level"`
+	State      string `db:"state"`
+	TotalVotes int    `db:"totalVotes"`
+	Level      string `db:"level"`
 }
 
 // QueryMaker struct{Db dbInterface, sql }
@@ -29,7 +29,7 @@ func (q *QueryMaker) connectToDB() (dbConnector.DBConnector, error) {
 }
 
 func (q *QueryMaker) DoQuery(input string) (*sql.Rows, error) {
-	results, err := q.Db.Query(input)
+	results, err := q.Db.Queryx(input)
 	if err != nil {
 		log.Printf("error doing query %q: %s", input, err.Error())
 		return nil, err
@@ -40,15 +40,15 @@ func (q *QueryMaker) DoQuery(input string) (*sql.Rows, error) {
 func DeserializeRows(r *sql.Rows) error {
 	for r.Next() {
 		var votesByState VotesByState
-		// for each row, scan the result into our votesByState composite object
-		err := r.Scan(&votesByState.state, &votesByState.totalVotes, &votesByState.level)
+
+		err := r.StructScan(&votesByState)
 		if err != nil {
 			panic(err.Error()) // proper error handling instead of panic in your app
 		}
 		// and then print out the votesByState's Name attribute
-		log.Printf(votesByState.state)
-		log.Printf("%v", votesByState.totalVotes)
-		log.Printf("%v", votesByState.level)
+		log.Printf(votesByState.State)
+		log.Printf("%v", votesByState.TotalVotes)
+		log.Printf("%v", votesByState.Level)
 		log.Println()
 	}
 	return nil

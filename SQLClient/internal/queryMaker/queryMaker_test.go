@@ -14,7 +14,7 @@ func TestQueryMaker(t *testing.T) {
 	queryString := "testIn"
 	errMsg := "anErr"
 
-	mockDB.On("Query", queryString).Return(nil, errors.New(errMsg))
+	mockDB.On("Queryx", queryString).Return(nil, errors.New(errMsg))
 
 	_, err := qm.DoQuery(queryString)
 	assert.EqualError(t, err, errMsg)
