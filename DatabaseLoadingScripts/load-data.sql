@@ -1,6 +1,7 @@
 create database If NOT Exists Election;
 use Election;
 
+source /var/lib/mysql-files/DatabaseLoadingScripts/load-candidate-data.sql;
 source /var/lib/mysql-files/DatabaseLoadingScripts/load-sentiment-data.sql;
 source /var/lib/mysql-files/DatabaseLoadingScripts/load-user-data.sql;
 source /var/lib/mysql-files/DatabaseLoadingScripts/load-location-data.sql;
