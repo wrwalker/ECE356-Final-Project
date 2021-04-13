@@ -3,8 +3,8 @@ package queryMaker
 import (
 	"errors"
 	"fmt"
-	"github.com/ECE356-Final-Project/SQLClient/internal/dbConnector"
-	"github.com/ECE356-Final-Project/SQLClient/internal/utils"
+	"github.com/ECE356-Final-Project/SQLClient/src/internal/dbConnector"
+	"github.com/ECE356-Final-Project/SQLClient/src/internal/utils"
 	_ "github.com/go-sql-driver/mysql"
 	sql "github.com/jmoiron/sqlx"
 	"log"

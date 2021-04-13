@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const rootStr = "ElectionCLI"
+const rootStr = "SQLClient"
 
 var Verbose bool
 

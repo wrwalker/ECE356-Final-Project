@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/ECE356-Final-Project/SQLClient/internal/queryMaker"
+	"github.com/ECE356-Final-Project/SQLClient/src/internal/queryMaker"
 	"github.com/spf13/cobra"
 )
 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ECE356-Final-Project/SQLClient/cmd"
+	"github.com/ECE356-Final-Project/SQLClient/src/cmd"
 	_ "github.com/go-sql-driver/mysql"
 )
 

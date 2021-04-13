@@ -2,7 +2,7 @@ package queryMaker
 
 import (
 	"errors"
-	"github.com/ECE356-Final-Project/SQLClient/internal/dbConnector/mocks"
+	"github.com/ECE356-Final-Project/SQLClient/src/internal/dbConnector/mocks"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

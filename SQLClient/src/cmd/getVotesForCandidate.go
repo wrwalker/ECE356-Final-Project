@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/ECE356-Final-Project/SQLClient/internal/queryMaker"
+	"github.com/ECE356-Final-Project/SQLClient/src/internal/queryMaker"
 	"github.com/spf13/cobra"
 )
 
@@ -26,7 +26,7 @@ var getVotesForCandidateCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		fmt.Printf("candidateName recieved %d votes\n", numVotes)
+		fmt.Printf("%s recieved %d votes\n", candidateName, numVotes)
 		return nil
 	},
 }
