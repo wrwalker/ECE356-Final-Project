@@ -3,8 +3,7 @@
 package mocks
 
 import (
-	sql "database/sql"
-
+	sqlx "github.com/jmoiron/sqlx"
 	mock "github.com/stretchr/testify/mock"
 )
 
@@ -27,19 +26,19 @@ func (_m *DBConnector) Close() error {
 	return r0
 }
 
-// Query provides a mock function with given fields: query, args
-func (_m *DBConnector) Query(query string, args ...interface{}) (*sql.Rows, error) {
+// Queryx provides a mock function with given fields: query, args
+func (_m *DBConnector) Queryx(query string, args ...interface{}) (*sqlx.Rows, error) {
 	var _ca []interface{}
 	_ca = append(_ca, query)
 	_ca = append(_ca, args...)
 	ret := _m.Called(_ca...)
 
-	var r0 *sql.Rows
-	if rf, ok := ret.Get(0).(func(string, ...interface{}) *sql.Rows); ok {
+	var r0 *sqlx.Rows
+	if rf, ok := ret.Get(0).(func(string, ...interface{}) *sqlx.Rows); ok {
 		r0 = rf(query, args...)
 	} else {
 		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*sql.Rows)
+			r0 = ret.Get(0).(*sqlx.Rows)
 		}
 	}
 
