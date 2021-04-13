@@ -26,9 +26,18 @@ func DeserializeRowsToMappedInterface(r *sql.Rows) ([]map[string]interface{}, []
 }
 
 func PrintMap(m []map[string]interface{}, colNames []string) {
+	for _, k := range colNames {
+		fmt.Printf("%20s| ", k)
+	}
+	fmt.Println()
+	for range colNames {
+		fmt.Print("------------------------")
+	}
+	fmt.Println()
+
 	for _, row := range m {
 		for _, k := range colNames {
-			fmt.Printf("%s: %s, ", k, row[k])
+			fmt.Printf("%20s| ", row[k])
 		}
 		fmt.Println()
 	}
