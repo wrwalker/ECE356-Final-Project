@@ -7,7 +7,7 @@ select 'Create VotesByState' as '';
 
 create table VotesByState
 (
-    state      char(20)     not null,
+    state      char(30)     not null,
     totalVotes int unsigned not null,
     primary key (state)
 );

@@ -10,8 +10,8 @@ create table Location
     tweetID     BIGINT          not null,
     latitude    decimal(25, 20) not null CHECK (latitude <> ''),
     longitude   decimal(25, 20) not null CHECK (longitude <> ''),
-    county_name char(20)        not null,
-    state_name  char(20)        not null,
+    county_name char(30)        not null,
+    state_name  char(30)        not null,
     primary key (tweetID)
 );
 
