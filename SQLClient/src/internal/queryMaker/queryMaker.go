@@ -82,6 +82,37 @@ func (q *QueryMaker) GetVotesForCandidate(candidate, county string, states []str
 	return byteToInt, query, nil
 }
 
+func getStringForCheckCountyExists(state string, county string) string {
+	return fmt.Sprintf("select state, county from County where state = %q and county = %q limit 1", state, county)
+}
+
+func (q *QueryMaker) CheckCountyExists(state string, county string) (bool, string, error) {
+	query := getStringForCheckCountyExists(state, county)
+	rows, colNames, err := q.DoRawQuery(query)
+	if err != nil {
+		return false, "", err
+	}
+	if len(rows) < 1 || rows[0][colNames[0]] == nil {
+		return false, "", errors.New("could not find any matches")
+	}
+
+	return true, query, nil
+}
+
+func getStringForAddCountyAnnotation(state string, county string, annotation string) string {
+	return fmt.Sprintf("update County set annotations = %q where state = %q and county = %q", annotation, state, county)
+}
+
+func (q *QueryMaker) AddCountyAnnotation(state string, county string, annotation string) (string, error) {
+	query := getStringForAddCountyAnnotation(state, county, annotation)
+	_, _, err := q.DoRawQuery(query)
+	if err != nil {
+		return query, err
+	}
+
+	return query, nil
+}
+
 func (q *QueryMaker) DoRawQuery(input string) ([]map[string]interface{}, []string, error) {
 	res, err := q.doQuery(input)
 	if err != nil {
