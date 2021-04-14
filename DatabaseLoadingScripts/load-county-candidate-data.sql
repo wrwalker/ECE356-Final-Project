@@ -7,7 +7,7 @@ select 'Create VotesByCountyCandidate' as '';
 
 create table VotesByCountyCandidate
 (
-    state     char(20)     not null,
+    state     char(30)     not null,
     county    char(30)     not null,
     candidate char(30)     not null,
     votes     int unsigned not null,

@@ -7,11 +7,12 @@ select 'Create VotesByCounty' as '';
 
 create table VotesByCounty
 (
-    state      char(20)     not null,
+    state      char(30)     not null,
     county     char(30)     not null,
     totalVotes int unsigned not null,
     percent    int unsigned,
-    primary key (state, county)
+    primary key (state, county),
+    foreign key (state, county) references County(state, county)
 );
 
 -- Presidential by County ------------------
