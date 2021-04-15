@@ -82,6 +82,30 @@ func (q *QueryMaker) GetVotesForCandidate(candidate, county string, states []str
 	return byteToInt, query, nil
 }
 
+func getStringForGetCountyAnnotations(state string, county string) string {
+	qString := fmt.Sprintf("select state, county, annotations from County where annotations != \"\"")
+
+	if state != ""{
+		qString = fmt.Sprintf("%s and state=%q", qString, state)
+	}
+	if county != "" {
+		qString = fmt.Sprintf("%s and county=%q", qString, county)
+	}
+	return qString
+}
+
+func (q *QueryMaker) GetCountyAnnotations(state string, county string) ([]map[string]interface{}, []string, string, error) {
+	query := getStringForGetCountyAnnotations(state, county)
+	rows, colNames, err := q.DoRawQuery(query)
+	if err != nil {
+		return nil, nil, query, err
+	}
+	if len(rows) < 1 || rows[0][colNames[0]] == nil {
+		return nil, nil, query, errors.New("could not find any matches")
+	}
+	return rows, colNames, query, nil
+}
+
 func getStringForCheckCountyExists(state string, county string) string {
 	return fmt.Sprintf("select state, county from County where state = %q and county = %q limit 1", state, county)
 }
@@ -90,10 +114,10 @@ func (q *QueryMaker) CheckCountyExists(state string, county string) (bool, strin
 	query := getStringForCheckCountyExists(state, county)
 	rows, colNames, err := q.DoRawQuery(query)
 	if err != nil {
-		return false, "", err
+		return false, query, err
 	}
 	if len(rows) < 1 || rows[0][colNames[0]] == nil {
-		return false, "", errors.New("could not find any matches")
+		return false, query, errors.New("could not find any matches")
 	}
 
 	return true, query, nil

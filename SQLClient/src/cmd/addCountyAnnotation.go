@@ -48,9 +48,11 @@ func init() {
 
 	stateFlag := "state"
 	addCountyAnnotationCmd.Flags().StringVarP(&state, stateFlag, "s", "", "state the county is in")
+	addCountyAnnotationCmd.MarkFlagRequired(stateFlag)
 
 	countyFlag := "county"
 	addCountyAnnotationCmd.Flags().StringVarP(&countyToAnnotate, countyFlag, "c", "", "county to to add annotation to")
+	addCountyAnnotationCmd.MarkFlagRequired(countyFlag)
 
 	annotationFlag := "annotation"
 	addCountyAnnotationCmd.Flags().StringVarP(&annotation, annotationFlag, "a", "", "annotation string to add to county")
