@@ -145,6 +145,39 @@ func (q *QueryMaker) AddCountyAnnotation(state string, county string, annotation
 	return query, nil
 }
 
+func getStringForGetNumberOfTweets(state string, county string) string {
+	qString := fmt.Sprintf("select count(ElectionTweets.tweetID) from ElectionTweets")
+
+	if county != "" || state != "" {
+		qString = fmt.Sprintf("%s join Location on Location.tweetID = ElectionTweets.tweetID where", qString)
+
+		if state != "" {
+			qString = fmt.Sprintf("%s Location.state_name=%q", qString, state)
+		}
+		if county != "" && state != "" {
+			qString = fmt.Sprintf("%s and", qString)
+		}
+		if county != "" {
+			qString = fmt.Sprintf("%s Location.county_name=%q", qString, county)
+		}
+	}
+	return qString
+}
+
+func (q *QueryMaker) GetNumberOfTweets(state string, county string) (int, string, error) {
+	query := getStringForGetNumberOfTweets(state, county)
+	rows, colNames, err := q.DoRawQuery(query)
+	if err != nil {
+		return -1, query, err
+	}
+	if len(rows) < 1 || rows[0][colNames[0]] == nil {
+		return -1, query, errors.New("could not find any matches")
+	}
+	bytes := rows[0][colNames[0]].([]byte)
+	byteToInt, _ := strconv.Atoi(string(bytes)) // hack to convert from byteslice ([]uint8) to int
+	return byteToInt, query, nil
+}
+
 func (q *QueryMaker) DoRawQuery(input string) ([]map[string]interface{}, []string, error) {
 	res, err := q.doQuery(input)
 	if err != nil {
