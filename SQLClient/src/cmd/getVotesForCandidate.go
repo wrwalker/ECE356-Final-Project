@@ -11,6 +11,7 @@ const getVotesForCandidate = "GetVotesForCandidate"
 var candidateName string
 var states []string
 var county string
+var annotationsBoolean bool
 
 var getVotesForCandidateCmd = &cobra.Command{
 	Use:   getVotesForCandidate,
@@ -19,7 +20,7 @@ var getVotesForCandidateCmd = &cobra.Command{
 		qm := queryMaker.NewQueryMaker()
 		defer qm.Db.Close()
 
-		numVotes, attemptedQuery, err := qm.GetVotesForCandidate(candidateName, county, states)
+		numVotes, attemptedQuery, err := qm.GetVotesForCandidate(candidateName, county, states, annotationsBoolean)
 		if Verbose {
 			fmt.Printf("Ran: %s\n", attemptedQuery)
 		}
@@ -40,7 +41,10 @@ func init() {
 	getVotesForCandidateCmd.Flags().StringSliceVarP(&states, stateFlag, "s", []string{}, "states to tally Votes")
 
 	countyFlag := "county"
-	getVotesForCandidateCmd.Flags().StringVarP(&candidateName, countyFlag, "c", "", "county to tally Votes")
+	getVotesForCandidateCmd.Flags().StringVarP(&county, countyFlag, "c", "", "county to tally Votes")
+
+	annotationsFlag := "annotations"
+	getVotesForCandidateCmd.Flags().BoolVarP(&annotationsBoolean, annotationsFlag, "a", false, "add this to filter results by counties you've annotated")
 
 	RootCMD.AddCommand(getVotesForCandidateCmd)
 }
