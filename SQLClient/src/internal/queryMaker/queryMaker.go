@@ -98,10 +98,10 @@ func (q *QueryMaker) GetCountyAnnotations(state string, county string) ([]map[st
 	query := getStringForGetCountyAnnotations(state, county)
 	rows, colNames, err := q.DoRawQuery(query)
 	if err != nil {
-		return nil, nil, "", err
+		return nil, nil, query, err
 	}
 	if len(rows) < 1 || rows[0][colNames[0]] == nil {
-		return nil, nil, "", errors.New("could not find any matches")
+		return nil, nil, query, errors.New("could not find any matches")
 	}
 	return rows, colNames, query, nil
 }
@@ -114,10 +114,10 @@ func (q *QueryMaker) CheckCountyExists(state string, county string) (bool, strin
 	query := getStringForCheckCountyExists(state, county)
 	rows, colNames, err := q.DoRawQuery(query)
 	if err != nil {
-		return false, "", err
+		return false, query, err
 	}
 	if len(rows) < 1 || rows[0][colNames[0]] == nil {
-		return false, "", errors.New("could not find any matches")
+		return false, query, errors.New("could not find any matches")
 	}
 
 	return true, query, nil
