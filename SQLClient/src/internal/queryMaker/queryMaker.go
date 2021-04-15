@@ -49,17 +49,25 @@ func NewQueryMaker(dbs ...dbConnector.DBConnector) *QueryMaker {
 	return qm
 }
 
-func getStringForGetVotesForCandidate(candidate, county string, states []string) string {
-	qString := fmt.Sprintf("select sum(votes) from VotesByCountyCandidate where candidate = %q", candidate)
+func getStringForGetVotesForCandidate(candidate, county string, states []string, annotationsFlag bool) string {
+	joinString := ""
+	if annotationsFlag {
+		joinString = " join County on VotesByCountyCandidate.state=County.state and VotesByCountyCandidate.county=County.county"
+	}
+	qString := fmt.Sprintf("select sum(votes) from VotesByCountyCandidate%s where candidate = %q", joinString, candidate)
+	if annotationsFlag {
+		joinString = " and County.annotations != \"\""
+		qString = fmt.Sprintf("%s%s", qString, joinString)
+	}
 
 	if county != "" || len(states) > 0 {
 		if county != "" {
-			qString = fmt.Sprintf("%s and county=%q", qString, county)
+			qString = fmt.Sprintf("%s and VotesByCountyCandidate.county=%q", qString, county)
 		}
 		if len(states) > 0 {
 			qStates := ""
 			for _, state := range states {
-				qStates = fmt.Sprintf("%s state=%q or", qStates, state)
+				qStates = fmt.Sprintf("%s VotesByCountyCandidate.state=%q or", qStates, state)
 			}
 			qStates = strings.Trim(qStates, " or")
 			qString = fmt.Sprintf("%s and (%s)", qString, qStates)
@@ -68,14 +76,14 @@ func getStringForGetVotesForCandidate(candidate, county string, states []string)
 	return qString
 }
 
-func (q *QueryMaker) GetVotesForCandidate(candidate, county string, states []string) (int, string, error) {
-	query := getStringForGetVotesForCandidate(candidate, county, states)
+func (q *QueryMaker) GetVotesForCandidate(candidate, county string, states []string, annotationsFlag bool) (int, string, error) {
+	query := getStringForGetVotesForCandidate(candidate, county, states, annotationsFlag)
 	rows, colNames, err := q.DoRawQuery(query)
 	if err != nil {
-		return 0, "", err
+		return 0, query, err
 	}
 	if len(rows) < 1 || rows[0][colNames[0]] == nil {
-		return 0, "", errors.New("could not find any matches")
+		return 0, query, errors.New("could not find any matches")
 	}
 	bytes := rows[0][colNames[0]].([]byte)
 	byteToInt, _ := strconv.Atoi(string(bytes)) // hack to convert from byteslice ([]uint8) to int
