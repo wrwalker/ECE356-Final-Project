@@ -91,6 +91,67 @@ func (q *QueryMaker) GetVotesForCandidate(candidate, county string, states []str
 	return byteToInt, query, nil
 }
 
+func getStringForGetWinner(state string, county string, candidate string) string {
+	qString := fmt.Sprintf("select count(*) from VotesByCountyCandidate where won = true and candidate = %q", candidate)
+	if county != "" {
+		qString = fmt.Sprintf("%s and county=%q", qString, county)
+	}
+	if state != "" {
+		qString = fmt.Sprintf("%s and state=%q", qString, state)
+	}
+	return qString
+}
+
+func (q *QueryMaker) GetWinner(state string, county string, maker *QueryMaker) (string, string, error) {
+	if state != "" && county != ""{
+		query := getStringForGetWinner(state, county, "Donald Trump")
+		rows, colNames, err := q.DoRawQuery(query)
+		if err != nil {
+			return "", query, err
+		}
+		if len(rows) < 1 || rows[0][colNames[0]] == nil {
+			return "", query, errors.New("could not find any matches")
+		}
+		bytes := rows[0][colNames[0]].([]byte)
+		trump, _ := strconv.Atoi(string(bytes))
+		fmt.Printf("Ran: %s\n", query)
+
+		query = getStringForGetWinner(state, county, "Joe Biden")
+		rows, colNames, err = q.DoRawQuery(query)
+		if err != nil {
+			return "", query, err
+		}
+		if len(rows) < 1 || rows[0][colNames[0]] == nil {
+			return "", query, errors.New("could not find any matches")
+		}
+		bytes = rows[0][colNames[0]].([]byte)
+		biden, _ := strconv.Atoi(string(bytes)) // hack to convert from byteslice ([]uint8) to int
+
+		if trump > biden {
+			return "Donald Trump", query, nil
+		} else if trump < biden {
+			return "Joe Biden", query, nil
+		} else {
+			return "Tie?", query, errors.New("could not find any matches")
+		}
+	} else if state != "" && county == "" {
+		x := []string{state}
+		trump, _, _ := maker.GetVotesForCandidate("Donald Trump", "", x, false)
+
+		biden, _, _ := maker.GetVotesForCandidate("Joe Biden", "", x, false)
+
+		if trump > biden {
+			return "Donald Trump", "", nil
+		} else if trump < biden {
+			return "Joe Biden", "", nil
+		} else {
+			return "Tie?", "", errors.New("could not find any matches")
+		}
+	} else {
+		return "Joe Biden", "", nil
+	}
+}
+
 func getStringForGetCountyAnnotations(state string, county string) string {
 	qString := fmt.Sprintf("select state, county, annotations from County where annotations != \"\"")
 
