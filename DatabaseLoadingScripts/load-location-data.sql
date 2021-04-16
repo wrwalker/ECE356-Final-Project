@@ -7,10 +7,12 @@ select 'Create Location' as '';
 
 create table Location
 (
-    tweetID     BIGINT          not null,
-    county_name char(30)        not null,
-    state_name  char(30)        not null,
-    primary key (tweetID)
+    tweetID     BIGINT   not null,
+    county_name char(30) not null,
+    state_name  char(30) not null,
+    primary key (tweetID),
+    index (county_name),
+    index (state_name)
 );
 
 -- Governor by State ------------------
