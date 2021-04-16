@@ -179,18 +179,35 @@ func (q *QueryMaker) GetNumberOfTweets(state string, county string) (int, string
 	return byteToInt, query, nil
 }
 
-func getStringForGetTweetSentimentCount(trumpOrBiden string, state string, county string) string {
-	qString := fmt.Sprintf("select count(ElectionTweets.tweetID) from ElectionTweets join Sentiment on ElectionTweets.tweetID=Sentiment.tweetID")
+func getStringForGetTweetPositiveSentimentCount(trumpOrBiden string, state string, county string) string {
+	qString := fmt.Sprintf("select count(ElectionTweets.tweetID) from ElectionTweets join Sentiment on ElectionTweets.tweetID=Sentiment.tweetID join Location on ElectionTweets.tweetID=Location.tweetID")
 	qString = fmt.Sprintf("%s where ElectionTweets.trumpOrBiden=%q and sentimentScore=true", qString, trumpOrBiden)
 
 	// select count(*) from ElectionTweets join Sentiment on ElectionTweets.tweetID=Sentiment.tweetID where ElectionTweets.trumpOrBiden='T' and sentimentScore=true
 
 	if county != "" || state != "" {
 		if state != "" {
-			qString = fmt.Sprintf("%s and state=%q", qString, state)
+			qString = fmt.Sprintf("%s and state_name=%q", qString, state)
 		}
 		if county != "" {
-			qString = fmt.Sprintf("%s and county=%q", qString, county)
+			qString = fmt.Sprintf("%s and county_name=%q", qString, county)
+		}
+	}
+	return qString
+}
+
+func getStringForGetTweetTotalSentimentCount(trumpOrBiden string, state string, county string) string {
+	qString := fmt.Sprintf("select count(ElectionTweets.tweetID) from ElectionTweets join Sentiment on ElectionTweets.tweetID=Sentiment.tweetID join Location on ElectionTweets.tweetID=Location.tweetID")
+	qString = fmt.Sprintf("%s where ElectionTweets.trumpOrBiden=%q", qString, trumpOrBiden)
+
+	// select count(*) from ElectionTweets join Sentiment on ElectionTweets.tweetID=Sentiment.tweetID where ElectionTweets.trumpOrBiden='T' and sentimentScore=true
+
+	if county != "" || state != "" {
+		if state != "" {
+			qString = fmt.Sprintf("%s and state_name=%q", qString, state)
+		}
+		if county != "" {
+			qString = fmt.Sprintf("%s and county_name=%q", qString, county)
 		}
 	}
 	return qString
@@ -207,7 +224,7 @@ func (q *QueryMaker) GetTweetSentiment(candidate string, state string, county st
 		trumpOrBiden = "B"
 	}
 
-	query := getStringForGetTweetSentimentCount(trumpOrBiden, state, county)
+	query := getStringForGetTweetPositiveSentimentCount(trumpOrBiden, state, county)
 	rows, colNames, err := q.DoRawQuery(query)
 	if err != nil {
 		return -1, query, err
@@ -220,7 +237,7 @@ func (q *QueryMaker) GetTweetSentiment(candidate string, state string, county st
 	fmt.Printf("Ran: %s\n", query)
 
 
-	query = getStringForGetNumberOfTweets(state, county)
+	query = getStringForGetTweetTotalSentimentCount(trumpOrBiden, state, county)
 	rows, colNames, err = q.DoRawQuery(query)
 	if err != nil {
 		return -1, query, err
