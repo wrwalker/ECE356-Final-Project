@@ -8,6 +8,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	sql "github.com/jmoiron/sqlx"
 	"log"
+	"math"
 	"strconv"
 	"strings"
 )
@@ -176,6 +177,60 @@ func (q *QueryMaker) GetNumberOfTweets(state string, county string) (int, string
 	bytes := rows[0][colNames[0]].([]byte)
 	byteToInt, _ := strconv.Atoi(string(bytes)) // hack to convert from byteslice ([]uint8) to int
 	return byteToInt, query, nil
+}
+
+func getStringForGetTweetSentimentCount(trumpOrBiden string, state string, county string) string {
+	qString := fmt.Sprintf("select count(ElectionTweets.tweetID) from ElectionTweets join Sentiment on ElectionTweets.tweetID=Sentiment.tweetID")
+	qString = fmt.Sprintf("%s where ElectionTweets.trumpOrBiden=%q and sentimentScore=true", qString, trumpOrBiden)
+
+	// select count(*) from ElectionTweets join Sentiment on ElectionTweets.tweetID=Sentiment.tweetID where ElectionTweets.trumpOrBiden='T' and sentimentScore=true
+
+	if county != "" || state != "" {
+		if state != "" {
+			qString = fmt.Sprintf("%s and state=%q", qString, state)
+		}
+		if county != "" {
+			qString = fmt.Sprintf("%s and county=%q", qString, county)
+		}
+	}
+	return qString
+}
+
+func (q *QueryMaker) GetTweetSentiment(candidate string, state string, county string) (float64, string, error) {
+	if candidate != "Donald Trump" && candidate != "Joe Biden" {
+		return math.NaN(), "", errors.New("candidate must be \"Donald Trump\" or \"Joe Biden\"")
+	}
+	trumpOrBiden := ""
+	if candidate == "Donald Trump" {
+		trumpOrBiden = "T"
+	} else {
+		trumpOrBiden = "B"
+	}
+
+	query := getStringForGetTweetSentimentCount(trumpOrBiden, state, county)
+	rows, colNames, err := q.DoRawQuery(query)
+	if err != nil {
+		return -1, query, err
+	}
+	if len(rows) < 1 || rows[0][colNames[0]] == nil {
+		return -1, query, errors.New("could not find any matches")
+	}
+	bytes := rows[0][colNames[0]].([]byte)
+	positiveSentimentCount, _ := strconv.Atoi(string(bytes)) // hack to convert from byteslice ([]uint8) to int
+	fmt.Printf("Ran: %s\n", query)
+
+
+	query = getStringForGetNumberOfTweets(state, county)
+	rows, colNames, err = q.DoRawQuery(query)
+	if err != nil {
+		return -1, query, err
+	}
+	if len(rows) < 1 || rows[0][colNames[0]] == nil {
+		return -1, query, errors.New("could not find any matches")
+	}
+	bytes = rows[0][colNames[0]].([]byte)
+	totalCount, _ := strconv.Atoi(string(bytes)) // hack to convert from byteslice ([]uint8) to int
+	return float64(positiveSentimentCount)/float64(totalCount) * 100.0, query, nil
 }
 
 func (q *QueryMaker) DoRawQuery(input string) ([]map[string]interface{}, []string, error) {
