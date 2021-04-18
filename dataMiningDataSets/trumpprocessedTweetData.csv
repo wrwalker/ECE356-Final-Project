@@ -1,811 +1,567 @@
 county,state,weightedSentimentOfTweets,percentOfTweets
-Walker,Alabama,54.8000,43.84
-Hillsborough,New Hampshire,11.5000,61.54
-Kingsbury,South Dakota,-0.7000,42.86
-Allegany,Maryland,13.6000,54.55
-St. Johns,Florida,33.8000,40.91
-Dubois,Indiana,-1.0000,100.00
-Greenville,South Carolina,61.2000,54.49
-Dixie,Florida,-1.0000,20.00
-Ward,North Dakota,2.0000,50.00
-Morton,Kansas,0.0000,0.00
-Chambers,Alabama,0.0000,0.00
-Kanawha,West Virginia,29.9000,85.71
-Goochland,Virginia,2.3000,100.00
-Collier,Florida,25.3000,59.09
-Brewster,Texas,1.6000,33.33
-San Patricio,Texas,9.3000,10.00
-Morgan,Illinois,-2.2000,50.00
-Boone,Illinois,-2.0000,50.00
-Van Buren,Michigan,0.0000,0.00
-Ohio,West Virginia,3.9000,41.18
-Neosho,Kansas,3.8000,44.44
-Wayne,West Virginia,33.0000,71.43
-Matagorda,Texas,2.5000,20.00
-Clay,Florida,1.6000,41.67
-Fayette,Georgia,9.4000,83.33
-Franklin,Texas,1.9000,100.00
-Hamilton,New York,0.0000,66.67
-Baldwin,Alabama,27.2000,71.43
-Lee,Alabama,58.5000,77.27
-Denton,Texas,80.3000,57.50
-Terrebonne,Louisiana,2.3000,50.00
-Nye,Nevada,10.8000,93.75
-Horry,South Carolina,68.3000,45.10
-Stark,Ohio,17.6000,60.00
-Ketchikan Gateway,Alaska,2.0000,40.00
-Bedford,Pennsylvania,0.0000,0.00
-Montgomery,Kansas,-0.6000,66.67
-Gallia,Ohio,6.1000,12.00
-Laramie,Wyoming,2.6000,100.00
-Jasper,Indiana,2.3000,40.00
-Ringgold,Iowa,0.0000,80.00
-Catawba,North Carolina,1.2000,85.71
-St. Charles,Missouri,7.5000,50.00
-Tuscarawas,Ohio,-1.0000,50.00
-Belmont,Ohio,3.0000,100.00
-Beaver,Utah,5.1000,75.00
-Salem City,Virginia,1.0000,100.00
-Berks,Pennsylvania,2.3000,80.00
-Erath,Texas,5.8000,28.00
-Barry,Missouri,0.0000,0.00
-Mariposa,California,19.7000,22.92
-Ottawa,Kansas,3.0000,6.82
-Boone,Indiana,5.0000,37.50
-Calhoun,Michigan,3.3000,10.71
-Graves,Kentucky,-1.0000,100.00
-Republic,Kansas,10.5000,100.00
-Tazewell,Virginia,1.0000,33.33
-Grays Harbor,Washington,2.5000,100.00
-Muhlenberg,Kentucky,-1.0000,33.33
-Leavenworth,Kansas,4.6000,80.00
-Jasper,Texas,1.0000,100.00
-Chautauqua,New York,6.4000,78.57
-Cabell,West Virginia,10.7000,48.00
-Taney,Missouri,1.0000,10.00
-Crisp,Georgia,2.2000,100.00
-Harrison,Iowa,0.0000,0.00
-Lewis and Clark,Montana,5.4000,87.50
-Davis,Utah,2.6000,57.14
-Choctaw,Alabama,1.6000,25.00
-Union,Illinois,2.2000,33.33
-Union,Iowa,1.0000,50.00
-Clearfield,Pennsylvania,20.8000,100.00
-Allen,Indiana,-0.3000,100.00
-Wood,West Virginia,2.5000,25.00
-Stone,Missouri,2.0000,100.00
-Craighead,Arkansas,3.2000,64.29
-Yabucoa,Puerto Rico,11.5000,53.85
-Jefferson,Kansas,0.0000,0.00
-Keweenaw,Michigan,0.0000,0.00
-Sweetwater,Wyoming,1.3000,100.00
-Henderson,Texas,70.3000,45.74
-Hardeman,Tennessee,70.0000,81.62
-Tazewell,Illinois,0.0000,0.00
-LaPorte,Indiana,-1.0000,100.00
-Morgan,Tennessee,2.5000,100.00
-Matanuska-Susitna,Alaska,5.7000,47.37
-Hampden,Massachusetts,6.2000,48.48
-Marshall,Alabama,2.3000,66.67
-Delaware,Indiana,5.8000,65.22
-Greene,New York,2.0000,100.00
-Mineral,Montana,2.8000,100.00
-Caledonia,Vermont,20.1000,98.31
-Mercer,West Virginia,18.5000,53.33
-Cheatham,Tennessee,0.0000,0.00
-Texas,Oklahoma,2.0000,66.67
-Carteret,North Carolina,-1.0000,14.29
-Suwannee,Florida,1.0000,100.00
-Nez Perce,Idaho,4.7000,45.83
-Love,Oklahoma,1.6000,100.00
-Monroe,Tennessee,1.0000,50.00
-Oldham,Texas,15.1000,92.86
-Pike,Illinois,0.0000,0.00
-Anderson,Tennessee,1.6000,63.64
-Cecil,Maryland,3.0000,75.00
-Mitchell,Texas,-8.8000,100.00
-Jersey,Illinois,0.0000,0.00
-Golden Valley,Montana,0.3000,7.69
-Racine,Wisconsin,2.0000,57.14
-Valencia,New Mexico,9.9000,61.90
-Hancock,Maine,1.0000,100.00
-Henry,Ohio,3.9000,100.00
-Flathead,Montana,16.4000,78.57
-Comal,Texas,23.2000,50.00
-Tom Green,Texas,0.0000,0.00
-Coweta,Georgia,1.0000,50.00
-Whitley,Kentucky,0.0000,0.00
-Anderson,Texas,4.5000,41.67
-Brookings,South Dakota,1.0000,100.00
-Harrison,West Virginia,0.0000,0.00
-Scott,Virginia,-1.0000,100.00
-Franklin,Pennsylvania,0.0000,0.00
-Rains,Texas,0.0000,0.00
-Smith,Texas,-2.0000,72.73
-Lycoming,Pennsylvania,49.7000,68.47
-Pickaway,Ohio,4.4000,66.67
-Limestone,Alabama,1.6000,33.33
-Hendricks,Indiana,1.0000,100.00
-Claiborne,Louisiana,-0.9000,90.91
-Franklin,Illinois,9.3000,81.82
-Johnson,Texas,4.3000,20.00
-Washington,Texas,-1.0000,100.00
-Skagway,Alaska,0.0000,0.00
-Box Elder,Utah,0.0000,0.00
-Conway,Arkansas,37.4000,73.68
-Greenwood,Kansas,12.4000,62.22
-Johnson,Arkansas,0.0000,0.00
-King,Texas,0.0000,0.00
-Coles,Illinois,4.0000,90.32
-Cerro Gordo,Iowa,0.0000,0.00
-Scott,Indiana,0.0000,0.00
-Isle of Wight,Virginia,0.0000,0.00
-Placer,California,40.3000,47.98
-Bartow,Georgia,0.9000,7.69
-Lampasas,Texas,0.0000,0.00
-Waupaca,Wisconsin,15.8000,80.43
-Jeff Davis,Texas,3.3000,100.00
-Randolph,North Carolina,-1.9000,58.33
-Monona,Iowa,2.0000,66.67
-Hale,Texas,-1.0000,10.00
-Schoharie,New York,0.0000,0.00
-Butler,Iowa,1.0000,25.00
-Pottawattamie,Iowa,7.6000,78.57
-York,Pennsylvania,2.0000,50.00
-Putnam,New York,3.2000,21.05
-Robeson,North Carolina,-0.9000,66.67
-Walker,Georgia,0.0000,0.00
-Macon,Illinois,42.7000,60.00
-Erie,Ohio,18.4000,42.62
-Bannock,Idaho,1.0000,50.00
-Carver,Minnesota,2.6000,50.00
-Bulloch,Georgia,1.0000,50.00
-Livingston,Illinois,0.0000,0.00
-Strafford,New Hampshire,2.0000,100.00
-Martin,Florida,9.0000,60.00
-Plumas,California,0.0000,0.00
-Columbia,Florida,26.2000,65.22
-Westmoreland,Virginia,1.0000,100.00
-Webster,Missouri,5.0000,87.50
-Monongalia,West Virginia,18.2000,42.50
-Hopkins,Kentucky,1.9000,20.00
-Ozaukee,Wisconsin,0.0000,0.00
-Clinton,Kentucky,0.0000,0.00
-Raleigh,West Virginia,-0.7000,80.00
-Waynesboro City,Virginia,2.3000,50.00
-Dorchester,Maryland,0.0000,33.33
-Livingston,Louisiana,1.0000,100.00
-Crawford,Illinois,0.0000,0.00
-Portage,Ohio,11.1000,85.71
-St. Bernard,Louisiana,0.0000,0.00
-San Jacinto,Texas,1.0000,50.00
-Wells,Indiana,1.0000,100.00
-Pike,Kentucky,32.4000,60.87
-Livingston,New York,9.4000,91.43
-Brown,Indiana,0.0000,0.00
-San Juan,Utah,0.0000,0.00
-Pulaski,Kentucky,10.8000,66.67
-Berrien,Georgia,7.6000,87.50
-Des Moines,Iowa,-1.0000,100.00
-Garland,Arkansas,1.7000,40.00
-Maury,Tennessee,3.0000,37.50
-Scotts Bluff,Nebraska,4.2000,42.86
-Bell,Texas,8.2000,72.73
-Preston,West Virginia,5.6000,44.44
-Wood,Wisconsin,1.9000,50.00
-Marion,Kansas,1.3000,33.33
-Marion,Texas,2.3000,66.67
-Huntingdon,Pennsylvania,-1.3000,100.00
-Sullivan,Tennessee,2.6000,50.00
-Appanoose,Iowa,15.4000,76.47
-Clay,Illinois,2.0000,20.00
-Coffee,Tennessee,0.6000,66.67
-Tulsa,Oklahoma,88.1000,53.50
-Perry,Missouri,1.0000,100.00
-York,Virginia,37.9000,87.27
-Jefferson,New York,-2.6000,75.00
-Carroll,Arkansas,0.0000,0.00
-Chemung,New York,-1.5000,44.44
-Wayne,Pennsylvania,0.0000,0.00
-Clark,Ohio,3.8000,80.00
-St. Lawrence,New York,34.3000,60.00
-Lincoln,Louisiana,0.0000,0.00
-Kerr,Texas,17.9000,61.90
-Ontario,New York,85.4000,96.88
-Butler,Kentucky,13.3000,19.08
-Alexander,North Carolina,0.0000,0.00
-Collin,Texas,86.7000,44.08
-Ector,Texas,4.0000,50.00
-Orange,Texas,12.4000,70.59
-Sumner,Tennessee,0.0000,0.00
-Colorado,Texas,5.4000,100.00
-Searcy,Arkansas,-1.3000,50.00
-Powell,Kentucky,4.7000,100.00
-Berrien,Michigan,2.9000,33.33
-Greenup,Kentucky,0.0000,0.00
-Calcasieu,Louisiana,-0.4000,25.00
-Cache,Utah,1.0000,16.67
-Davie,North Carolina,0.7000,75.00
-Tioga,New York,1.0000,100.00
-Juneau,Alaska,0.0000,0.00
-Idaho,Idaho,4.5000,17.50
-Manistee,Michigan,0.0000,0.00
-Bartholomew,Indiana,0.0000,0.00
-Pinal,Arizona,5.0000,52.63
-Knox,Maine,0.9000,50.00
-Warren,Ohio,-1.0000,100.00
-Pine,Minnesota,2.3000,100.00
-Dickinson,Iowa,-1.0000,100.00
-Lebanon,Pennsylvania,0.0000,0.00
-Otter Tail,Minnesota,8.6000,65.62
-Yuma,Arizona,32.2000,60.53
-Manatee,Florida,14.5000,55.77
-Meeker,Minnesota,2.0000,57.14
-Prince of Wales-Hyder,Alaska,2.3000,22.22
-Carroll,New Hampshire,1.3000,100.00
-Delaware,New York,1.0000,100.00
-Otero,Colorado,29.5000,18.75
-Volusia,Florida,44.6000,40.15
-Berkeley,West Virginia,17.5000,62.50
-Benton,Iowa,4.0000,100.00
-Dodge,Georgia,9.2000,16.33
-Ford,Kansas,0.3000,66.67
-Pontotoc,Mississippi,1.0000,100.00
-Mason,Michigan,13.7000,25.00
-Dona Ana,New Mexico,35.3000,65.45
-Hubbard,Minnesota,0.0000,0.00
-Woodruff,Arkansas,0.3000,66.67
-Brown,Wisconsin,18.6000,52.73
-Grant,Washington,0.0000,0.00
-Allen,Kansas,2.1000,83.33
-Park,Montana,0.0000,0.00
-Union,Kentucky,2.6000,100.00
-Northumberland,Pennsylvania,-1.1000,100.00
-Harper,Kansas,-2.5000,100.00
-Craven,North Carolina,6.0000,41.67
-Cattaraugus,New York,0.6000,54.55
-Beltrami,Minnesota,-2.9000,22.22
-Delaware,Iowa,2.0000,100.00
-Spotsylvania,Virginia,1.0000,50.00
-Greene,Indiana,3.3000,100.00
-Roscommon,Michigan,2.0000,40.00
-Del Norte,California,0.0000,0.00
-Sequoyah,Oklahoma,0.0000,0.00
-Fremont,Wyoming,32.0000,46.15
-Madison,Kentucky,8.3000,72.73
-Cass,North Dakota,14.8000,42.22
-Marathon,Wisconsin,9.6000,69.23
-Aroostook,Maine,0.0000,0.00
-Ashley,Arkansas,0.0000,0.00
-Sedgwick,Kansas,-81.4000,58.72
-Cross,Arkansas,1.0000,25.00
-Mercer,Pennsylvania,0.0000,0.00
-Washington,Oklahoma,2.6000,66.67
-LaSalle,Louisiana,4.2000,75.00
-Rockwall,Texas,-0.3000,55.17
-Wallace,Kansas,2.2000,100.00
-Pershing,Nevada,1.0000,10.00
-Escambia,Alabama,17.0000,73.68
-Faribault,Minnesota,0.0000,0.00
-Caroline,Virginia,-0.6000,100.00
-Bastrop,Texas,9.6000,36.84
-Tehama,California,-2.0000,100.00
-Richland,Ohio,42.0000,68.57
-Wayne,Indiana,0.0000,0.00
-Hancock,Illinois,2.3000,100.00
-Nolan,Texas,1.0000,33.33
-Carter,Kentucky,0.7000,75.00
-Orleans,Louisiana,-46.9000,63.45
-Comanche,Oklahoma,3.0000,54.17
-Pulaski,Illinois,-17.2000,100.00
-Prentiss,Mississippi,1.0000,100.00
-Fayette,West Virginia,0.0000,0.00
-Trumbull,Ohio,0.0000,0.00
-Scott,Missouri,0.0000,0.00
-Harris,Georgia,0.3000,100.00
-Henry,Virginia,0.0000,0.00
-Westmoreland,Pennsylvania,80.2000,98.11
-Sarpy,Nebraska,0.0000,0.00
-Clermont,Ohio,-1.0000,100.00
-Cass,Michigan,2.9000,57.14
-Cayuga,New York,0.0000,0.00
-Sully,South Dakota,19.4000,47.73
-Kendall,Texas,-1.0000,38.46
-Warren,New Jersey,1.0000,100.00
-Tipton,Indiana,-7.7000,47.55
-Carson City,Nevada,2.0000,60.87
-Butler,Ohio,26.9000,86.21
-Val Verde,Texas,2.0000,100.00
-Flagler,Florida,99.2000,78.79
-West Feliciana,Louisiana,0.0000,0.00
-Monroe,Georgia,2.6000,100.00
-Vermilion,Illinois,3.6000,25.00
-Carroll,Illinois,-1.3000,27.27
-Prairie,Arkansas,1.0000,100.00
-Clayton,Iowa,7.4000,80.00
-Grant,Kentucky,-2.8000,25.00
-Cherokee,Georgia,2.0000,100.00
-Ottawa,Michigan,0.9000,52.38
-Wexford,Michigan,0.9000,100.00
-Claiborne,Tennessee,0.0000,0.00
-Crosby,Texas,0.0000,0.00
-Madison,Alabama,36.6000,49.25
-Geauga,Ohio,1.0000,100.00
-Cheshire,New Hampshire,1.6000,33.33
-Caldwell,North Carolina,1.2000,80.00
-Cowley,Kansas,1.0000,50.00
-Crawford,Michigan,68.5000,45.28
-Cochise,Arizona,9.8000,85.71
-Natchitoches,Louisiana,-0.9000,66.67
-Worcester,Maryland,8.5000,90.00
-Shelby,Iowa,1.4000,100.00
-Roseau,Minnesota,0.0000,0.00
-Washington,Tennessee,14.2000,50.00
-Douglas,Colorado,7.4000,46.67
-Otsego,New York,0.0000,0.00
-Navajo,Arizona,7.3000,53.85
-Carson,Texas,1.3000,50.00
-Pottawatomie,Kansas,3.9000,60.00
-Reno,Kansas,0.0000,0.00
-Pope,Arkansas,0.0000,0.00
-Caldwell,Texas,1.6000,33.33
-Clinton,Ohio,1.6000,25.00
-Indian River,Florida,9.2000,40.82
-Guam,Guam,3.5000,50.00
-Panola,Texas,1.0000,100.00
-Franklin,Vermont,0.0000,0.00
-Lumpkin,Georgia,6.8000,40.00
-Forest,Wisconsin,1.0000,17.65
-Pottawatomie,Oklahoma,0.0000,0.00
-Fulton,Indiana,1.6000,50.00
-Taylor,Texas,53.3000,64.29
-Adair,Iowa,4.9000,44.44
-Hancock,West Virginia,7.7000,70.59
-Umatilla,Oregon,1.3000,100.00
-Sevier,Tennessee,5.5000,88.89
-Lee,North Carolina,-2.0000,50.00
-Dallas,Iowa,-1.8000,66.67
-Saline,Kansas,14.9000,78.57
-Benton,Arkansas,-0.7000,50.00
-Burleson,Texas,3.3000,71.43
-Wabash,Illinois,2.6000,100.00
-Douglas,Oregon,0.0000,0.00
-Gillespie,Texas,0.0000,0.00
-Benton,Washington,8.0000,69.23
-Young,Texas,1.3000,100.00
-Yamhill,Oregon,0.0000,0.00
-Pasco,Florida,32.1000,58.33
-McCracken,Kentucky,7.2000,80.00
-Winnebago,Iowa,7.0000,100.00
-Dunklin,Missouri,1.0000,50.00
-Warren,Kentucky,87.4000,54.55
-Washington,Pennsylvania,3.1000,50.00
-Jackson,North Carolina,0.0000,0.00
-Hamilton,Indiana,11.5000,36.00
-Bowie,Texas,11.1000,60.00
-Cass/Van Buren,Missouri,2.0000,50.00
-Beckham,Oklahoma,0.0000,0.00
-Rockbridge,Virginia,3.0000,30.00
-Harrison,Mississippi,63.2000,51.04
-Kenton,Kentucky,4.0000,90.00
-Kootenai,Idaho,0.0000,0.00
-Dawson,Georgia,0.0000,0.00
-Washington,Colorado,26.0000,91.18
-Jones,Mississippi,5.6000,78.57
-Sandusky,Ohio,16.5000,64.18
-Cumberland,Pennsylvania,-1.0000,20.00
-Atoka,Oklahoma,3.0000,60.00
-Oceana,Michigan,1.0000,50.00
-Wise,Virginia,-1.0000,50.00
-Fannin,Georgia,-1.0000,50.00
-Herkimer,New York,0.3000,100.00
-Middlesex,Connecticut,18.4000,51.47
-El Dorado,California,9.0000,32.05
-Douglas,Illinois,0.0000,0.00
-Henry,Illinois,-1.3000,100.00
-Winneshiek,Iowa,0.0000,0.00
-Saline,Nebraska,13.8000,26.67
-LaSalle,Illinois,-6.7000,92.68
-Clark,Indiana,1.0000,25.00
-Lancaster,South Carolina,0.0000,0.00
-Carroll,Georgia,2.0000,66.67
-Cumberland,Illinois,9.9000,73.68
-Sullivan,New York,0.0000,66.67
-Kay,Oklahoma,0.0000,0.00
-Tyler,West Virginia,1.6000,75.00
-Keokuk,Iowa,-2.3000,75.00
-Brooks,Georgia,0.0000,0.00
-Shiawassee,Michigan,0.0000,0.00
-Vernon,Wisconsin,-1.0000,50.00
-Wood,Texas,4.5000,30.00
-Greene,Missouri,18.2000,58.18
-Belknap,New Hampshire,18.1000,91.67
-Gallatin,Kentucky,0.3000,100.00
-Midland,Texas,41.1000,78.50
-Hardin,Kentucky,30.9000,58.06
-Grand Forks,North Dakota,53.4000,90.48
-Whitley,Indiana,0.0000,0.00
-Guthrie,Iowa,0.0000,0.00
-Kent,Rhode Island,2.0000,100.00
-Pike,Ohio,0.0000,0.00
-Rawlins,Kansas,0.0000,0.00
-Cidra,Puerto Rico,2.3000,100.00
-Elmore,Alabama,25.2000,18.75
-Kaufman,Texas,1.0000,14.29
-Warren,New York,0.0000,0.00
-Chenango,New York,0.0000,0.00
-Hot Spring,Arkansas,1.3000,20.00
-Johnston,North Carolina,2.3000,100.00
-Taylor,Kentucky,0.0000,0.00
-Macomb,Michigan,3.0000,62.50
-Fergus,Montana,74.9000,39.64
-Chickasaw,Iowa,3.9000,7.69
-Montague,Texas,5.0000,100.00
-Porter,Indiana,1.0000,50.00
-Luzerne,Pennsylvania,1.0000,33.33
-Pike,Pennsylvania,7.1000,70.00
-Stephenson,Illinois,-1.0000,60.00
-Williamson,Illinois,2.2000,100.00
-Mayes,Oklahoma,0.0000,0.00
-Christian,Kentucky,1.0000,100.00
-Long,Georgia,45.9000,56.00
-De Witt,Illinois,0.0000,0.00
-Sterling,Texas,1.6000,50.00
-Saluda,South Carolina,-1.6000,100.00
-Iredell,North Carolina,-1.0000,62.50
-Hempstead,Arkansas,4.0000,50.00
-Gilmer,Georgia,20.0000,90.91
-Jackson,Oregon,2.0000,14.29
-Twiggs,Georgia,-1.0000,100.00
-Charles Mix,South Dakota,25.9000,75.76
-Sheridan,North Dakota,17.5000,34.09
-Steuben,New York,3.3000,12.50
-Page,Virginia,8.3000,72.73
-McLennan,Texas,20.9000,67.50
-Okaloosa,Florida,21.3000,79.84
-Oconee,South Carolina,5.5000,58.82
-Itasca,Minnesota,1.1000,62.50
-Henderson,North Carolina,58.8000,92.86
-Cuming,Nebraska,0.0000,0.00
-Ward,Texas,6.8000,55.56
-McHenry,Illinois,5.6000,61.11
-Hunterdon,New Jersey,-37.9000,100.00
-St. Clair,Michigan,0.9000,66.67
-Yauco,Puerto Rico,0.7000,100.00
-Wabash,Indiana,3.0000,75.00
-Putnam,West Virginia,0.0000,0.00
-Franklin,Tennessee,7.3000,50.00
-Morgan,Alabama,2.6000,36.36
-Northwest Arctic,Alaska,2.0000,100.00
-Cedar,Iowa,3.7000,53.33
-Marion,Illinois,0.0000,0.00
-Catoosa,Georgia,-0.6000,100.00
-Bonner,Idaho,0.0000,50.00
-Major,Oklahoma,1.3000,50.00
-Humboldt,Nevada,18.3000,78.95
-Wayne,Kentucky,-1.6000,100.00
-Chambers,Texas,91.4000,10.81
-Rutherford,North Carolina,11.6000,82.61
-Bossier,Louisiana,6.5000,21.88
-Marion,Florida,42.5000,60.38
-Utuado,Puerto Rico,-0.6000,100.00
-Haywood,North Carolina,1.0000,100.00
-Mohave,Arizona,4.3000,86.49
-Lake,Ohio,0.0000,0.00
-Howard,Indiana,1.3000,50.00
-Toombs,Georgia,1.0000,50.00
-Logan,Arkansas,9.7000,100.00
-Bladen,North Carolina,1.0000,100.00
-Fayette,Texas,-1.0000,6.25
-Floyd,Georgia,1.0000,100.00
-Hutchinson,Texas,1.0000,20.00
-Livingston,Michigan,-1.0000,100.00
-Lorain,Ohio,-3.7000,86.96
-Valley,Nebraska,15.4000,43.48
-Harrison,Missouri,0.0000,0.00
-Columbia,Pennsylvania,8.2000,86.67
-Ontonagon,Michigan,3.1000,75.00
-Charlotte,Florida,27.9000,42.11
-Montgomery,North Carolina,1.0000,50.00
-Union,Arkansas,3.5000,100.00
-Thomas,Kansas,0.0000,0.00
-Red Lake,Minnesota,1.0000,100.00
-Jefferson,Montana,0.0000,0.00
-Grafton,New Hampshire,0.0000,0.00
-Cullman,Alabama,2.0000,50.00
-Warren,Iowa,1.3000,100.00
-Hickman,Tennessee,0.0000,0.00
-El Paso,Colorado,66.8000,51.91
-Rowan,North Carolina,1.0000,33.33
-Shasta,California,4.9000,25.00
-McCulloch,Texas,3.6000,33.33
-Cape May,New Jersey,21.0000,72.22
-Kings,California,1.0000,12.50
-Montmorency,Michigan,0.0000,0.00
-Tyler,Texas,19.7000,63.16
-Bell,Kentucky,0.0000,0.00
-Culebra,Puerto Rico,1.0000,100.00
-Saipan,Commonwealth of the Northern M,1.0000,100.00
-Rockingham,New Hampshire,8.6000,77.78
-Washington,Wisconsin,14.6000,70.83
-Wood,Ohio,3.9000,42.86
-St. Tammany,Louisiana,3.0000,60.00
-Pulaski,Missouri,0.0000,0.00
-Oneida,New York,74.6000,72.34
-Ellis,Texas,-18.0000,77.22
-Columbiana,Ohio,17.4000,47.83
-Elkhart,Indiana,0.0000,0.00
-Powhatan,Virginia,5.3000,83.33
-Logan,West Virginia,0.0000,0.00
-Jefferson,Wisconsin,0.0000,0.00
-Randolph,Illinois,37.8000,75.00
-Bay,Florida,45.2000,63.92
-Fremont,Iowa,28.0000,93.33
-Washington,Florida,1.6000,25.00
-Dunn,Wisconsin,0.0000,0.00
-Stanly,North Carolina,10.4000,40.00
-Caddo,Louisiana,39.2000,60.53
-Calloway,Kentucky,30.2000,85.71
-Randolph,West Virginia,0.0000,0.00
-Clinton,Illinois,5.3000,45.24
-Weld,Colorado,2.3000,40.00
-Liberty,Texas,25.5000,60.00
-Guadalupe,Texas,0.0000,0.00
-Ozark,Missouri,2.7000,70.00
-Dixon,Nebraska,-1.0000,50.00
-Montrose,Colorado,27.2000,87.10
-Aransas,Texas,8.2000,52.94
-McCurtain,Oklahoma,3.2000,28.57
-Hendry,Florida,4.1000,100.00
-Franklin,Alabama,3.6000,100.00
-Washington,Maine,7.8000,85.71
-Franklin,Kansas,-1.0000,100.00
-Christian,Illinois,0.0000,0.00
-Huntington,Indiana,2.2000,100.00
-San Juan,New Mexico,-3.7000,50.00
-Niagara,New York,3.1000,55.56
-Dade,Georgia,0.0000,0.00
-Concho,Texas,3.0000,87.50
-Rowan,Kentucky,0.0000,0.00
-Meade,South Dakota,1.0000,33.33
-Talladega,Alabama,-1.3000,50.00
-Lake,Michigan,0.0000,0.00
-Oswego,New York,17.7000,61.29
-Jackson,Mississippi,1.4000,37.50
-DeSoto,Mississippi,1.7000,80.00
-Finney,Kansas,-2.1000,96.08
-Washington,Missouri,0.0000,0.00
+Columbia,Pennsylvania,24.7564,86.67
+Coos,Oregon,-11.1623,37.50
+Nolan,Texas,-23.7803,33.33
+Pinal,Arizona,27.3779,52.63
+Cole,Missouri,36.9183,62.07
+Cumberland,Pennsylvania,-28.3246,20.00
+Decatur,Kansas,85.0966,62.26
+San Patricio,Texas,-13.3480,10.00
 Greenlee,Arizona,-1.0000,50.00
-Rogers,Oklahoma,1.0000,100.00
-White,Arkansas,2.0000,100.00
-Geary,Kansas,4.0000,100.00
-Kern,California,-57.8000,72.93
-Camden,Georgia,2.0000,50.00
-Oxford,Maine,-1.6000,100.00
-Washington,Arkansas,5.6000,36.96
-Jefferson,Missouri,1.2000,16.67
-Custer,Idaho,0.0000,0.00
-Greene,Ohio,0.0000,0.00
-Minnehaha,South Dakota,0.0000,0.00
-Cherokee,Kansas,-70.1000,57.63
-Darke,Ohio,0.0000,0.00
-Walker,Texas,-3.2000,33.33
-Cape Girardeau,Missouri,1.0000,25.00
-Kenosha,Wisconsin,2.7000,38.89
-Mecosta,Michigan,-1.9000,91.67
-Calvert,Maryland,0.8000,13.79
-Etowah,Alabama,-2.6000,50.00
-Camuy,Puerto Rico,1.0000,100.00
-Lyon,Kentucky,2.3000,100.00
-Eureka,Nevada,10.0000,85.71
-Bayamon,Puerto Rico,0.0000,0.00
-Fluvanna,Virginia,1.0000,100.00
-Henderson,Kentucky,0.7000,60.00
-Sumter,Florida,0.0000,0.00
-Rapides,Louisiana,2.0000,57.14
-Hinsdale,Colorado,0.0000,0.00
-White,Illinois,1.3000,13.04
-Marshall,Tennessee,0.0000,0.00
-Fannin,Texas,2.0000,100.00
-Cooke,Texas,6.9000,80.00
-Campbell,Kentucky,9.3000,68.75
-Brunswick,North Carolina,45.4000,77.27
-Boyd,Kentucky,5.7000,25.00
-Waukesha,Wisconsin,12.6000,10.20
-Shelby,Kentucky,2.2000,100.00
-Galveston,Texas,63.4000,53.93
-Garfield,Oklahoma,0.0000,0.00
-Houston,Alabama,4.0000,66.67
-Rappahannock,Virginia,18.5000,72.73
-Allen,Ohio,0.0000,0.00
-Outagamie,Wisconsin,2.0000,40.00
-Madera,California,5.7000,52.00
-Seward,Kansas,0.6000,100.00
-Stevens,Washington,2.3000,50.00
-Montgomery,Texas,35.5000,45.95
-Tinian,Commonwealth of the Northern M,0.0000,0.00
-Putnam,Tennessee,3.6000,50.00
-Carter,Oklahoma,-1.2000,66.67
-Titus,Texas,66.5000,66.14
-Greene,Tennessee,2.0000,14.29
-Parker,Texas,5.0000,50.00
-Cass,Nebraska,4.6000,100.00
-Putnam,Indiana,0.0000,0.00
-Madison,Iowa,0.0000,0.00
-Jefferson,West Virginia,0.0000,0.00
-Loudon,Tennessee,1.0000,33.33
-Cheyenne,Kansas,-1.0000,100.00
-Mesa,Colorado,2.3000,44.44
-Potter,Texas,41.0000,64.71
-Lowndes,Georgia,-1.2000,54.55
-Wright,Minnesota,0.0000,0.00
-Jessamine,Kentucky,3.6000,100.00
-Cass,Iowa,1.0000,50.00
-Lamar,Texas,8.5000,78.57
-Tift,Georgia,4.1000,40.00
-Ravalli,Montana,23.6000,74.07
-Jefferson,Illinois,54.4000,64.62
-Blair,Pennsylvania,3.9000,87.50
-Hall,Nebraska,25.8000,82.14
-Graham,Arizona,1.0000,100.00
-Randall,Texas,1.6000,50.00
-Quay,New Mexico,12.8000,100.00
-Coryell,Texas,1.0000,42.86
-Sheboygan,Wisconsin,-4.0000,29.27
-Tuscaloosa,Alabama,-4.5000,75.71
-Chattooga,Georgia,6.1000,89.83
-Moore,North Carolina,4.0000,66.67
-Sutton,Texas,1.0000,100.00
-Lincoln,Missouri,0.0000,0.00
-Kenai Peninsula,Alaska,12.7000,33.33
-DeSoto,Florida,-1.0000,25.00
-Tuolumne,California,2.0000,40.00
-Covington,Alabama,25.7000,55.17
-Jefferson,Louisiana,0.0000,50.00
-Kennebec,Maine,0.0000,0.00
-Aiken,South Carolina,7.0000,70.00
-St. John the Baptist,Louisiana,-0.3000,66.67
-Richland,Illinois,1.6000,25.00
-Hood,Texas,1.3000,100.00
-Citrus,Florida,-6.7000,64.77
-Mahoning,Ohio,60.7000,71.64
-Leon,Texas,1.4000,80.00
-Burleigh,North Dakota,0.0000,0.00
-Hancock,Indiana,1.0000,25.00
-Anoka,Minnesota,24.8000,37.04
-Yancey,North Carolina,-1.3000,20.00
-Marion,Missouri,0.0000,0.00
-Curry,New Mexico,0.0000,0.00
-Hamlin,South Dakota,1.0000,50.00
-Gila,Arizona,3.9000,37.50
-Grand Traverse,Michigan,10.5000,75.76
-Franklin,New York,0.0000,0.00
-Mitchell,Kansas,-1.0000,21.43
-Stone,Arkansas,0.0000,0.00
-Roanoke,Virginia,1.3000,25.00
-Santa Rosa,Florida,8.3000,38.46
-Gaston,North Carolina,11.4000,39.29
-Norton,Kansas,56.0000,83.33
-Delaware,Ohio,26.0000,64.10
-Richland,Wisconsin,10.1000,100.00
-Greene,Pennsylvania,0.0000,0.00
-Sherburne,Minnesota,11.8000,71.43
-Bristol,Massachusetts,25.4000,75.56
-Jasper,Missouri,10.3000,50.00
-Johnson,Missouri,5.8000,57.14
-Montgomery,Tennessee,52.5000,72.41
-Cole,Missouri,12.2000,62.07
-Spartanburg,South Carolina,5.8000,36.36
-Morgan,West Virginia,1.6000,78.57
-New Madrid,Missouri,1.0000,100.00
-Yakima,Washington,5.4000,60.00
-Wetzel,West Virginia,-1.3000,100.00
-Laurens,Georgia,1.3000,50.00
-Schuylkill,Pennsylvania,7.2000,55.56
-Wapello,Iowa,0.0000,0.00
-Rio Grande,Colorado,-2.2000,50.00
-Adair,Missouri,3.3000,62.50
-Hunt,Texas,-1.0000,100.00
-Linn,Oregon,0.0000,0.00
-Alamance,North Carolina,0.0000,0.00
-Lyon,Iowa,0.0000,0.00
-Johnson,Indiana,0.0000,0.00
-Crow Wing,Minnesota,10.4000,81.58
-Muscatine,Iowa,0.0000,0.00
-Grayson,Texas,6.3000,38.89
-Dare,North Carolina,2.7000,71.43
-Houghton,Michigan,5.6000,66.67
-Kewaunee,Wisconsin,0.0000,0.00
-Sac,Iowa,0.0000,0.00
-Georgetown,South Carolina,1.3000,12.50
-Jewell,Kansas,-1.5000,48.00
-Ashland,Ohio,2.1000,100.00
-Jackson,Michigan,0.0000,0.00
-Tucker,West Virginia,0.0000,0.00
-Muskogee,Oklahoma,3.0000,75.00
-Polk,Minnesota,44.0000,80.25
-Beaver,Pennsylvania,3.2000,46.15
-Hampshire,Massachusetts,27.1000,56.41
-DeKalb,Alabama,0.0000,0.00
-Culpeper,Virginia,-1.0000,100.00
-Boone,Kentucky,3.3000,100.00
-Wayne,Iowa,-7.3000,56.25
-Madison,Illinois,6.3000,42.86
-Somerset,Pennsylvania,1.0000,14.29
-Fairfield,Ohio,1.0000,100.00
-Clinton,Pennsylvania,-1.0000,33.33
-Merrick,Nebraska,7.4000,35.71
-Fayette,Pennsylvania,1.6000,16.67
-Lassen,California,0.0000,0.00
-Cambria,Pennsylvania,20.0000,59.26
-Carroll,Iowa,0.0000,16.67
-Cumberland,Tennessee,0.0000,0.00
-Ashtabula,Ohio,5.6000,100.00
-Butte,Idaho,3.9000,100.00
-North Slope,Alaska,1.3000,100.00
-Lake,Florida,15.2000,67.39
-Stearns,Minnesota,0.3000,25.00
-Lucas,Iowa,1.0000,100.00
-Davidson,North Carolina,1.5000,50.00
-Wilson,Tennessee,71.2000,61.54
-Bremer,Iowa,0.0000,0.00
-Nassau,Florida,5.9000,53.85
-Utah,Utah,13.9000,56.25
-Scotland,North Carolina,1.0000,100.00
-Allegany,New York,1.0000,100.00
-Ascension,Louisiana,0.0000,0.00
-Grant,Oregon,-0.4000,71.43
-Nacogdoches,Texas,-1.0000,100.00
-Berkshire,Massachusetts,3.6000,30.00
-Ouachita,Louisiana,-1.3000,70.00
-Wise,Texas,0.0000,0.00
-Butler,Pennsylvania,24.1000,91.38
-Washington,Ohio,0.0000,0.00
-Bethel,Alaska,14.2000,92.00
-Dorchester,South Carolina,6.2000,30.00
-Monroe,Florida,18.8000,47.14
-Golden Valley,North Dakota,2.3000,18.18
-Wayne,New York,15.1000,84.31
-Polk,Texas,0.0000,0.00
-Orange,Vermont,0.0000,0.00
-Roberts,Texas,1.0000,100.00
-Brule,South Dakota,0.0000,100.00
-Marion,Iowa,1.0000,100.00
-Martin,Indiana,1.0000,100.00
-Sussex,New Jersey,12.9000,90.91
-Coos,Oregon,1.0000,37.50
-Wheeler,Texas,1.3000,100.00
-Lawrence,Pennsylvania,12.8000,53.85
-Washington,Maryland,2.0000,22.22
-Cabarrus,North Carolina,1.3000,50.00
-Navarro,Texas,0.0000,0.00
-Weber,Utah,42.9000,84.62
-Miller,Missouri,5.8000,100.00
-Washington,Rhode Island,2.2000,33.33
-Webster,West Virginia,1.9000,100.00
-Dubuque,Iowa,0.3000,15.38
-Wabasha,Minnesota,0.0000,0.00
-Blount,Alabama,7.3000,70.00
-Platte,Missouri,-1.0000,50.00
-Decatur,Iowa,2.0000,66.67
-Kearney,Nebraska,4.0000,75.00
-Emanuel,Georgia,0.0000,0.00
-Walton,Georgia,2.9000,40.00
-Lexington,South Carolina,53.3000,60.00
-Hernando,Florida,20.4000,33.33
-Monroe,Illinois,-2.3000,30.43
-McMinn,Tennessee,0.0000,0.00
-Fairbanks North Star,Alaska,8.3000,30.56
-Clay,Kansas,0.0000,0.00
-Todd,Minnesota,2.2000,75.00
-Cass,Indiana,1.3000,100.00
-Waushara,Wisconsin,0.0000,0.00
-Beaufort,South Carolina,1.6000,100.00
-Columbia,Georgia,-1.0000,100.00
-Adams,Pennsylvania,8.9000,35.71
-Union,Pennsylvania,1.0000,100.00
-Payne,Oklahoma,0.0000,0.00
-Lincoln,Oklahoma,0.0000,0.00
-Klamath,Oregon,1.3000,100.00
+Madison,Illinois,-18.2145,42.86
+Powhatan,Virginia,15.6579,83.33
+Hutchinson,Texas,-11.5680,20.00
+Johnson,Missouri,12.9172,57.14
+Kerr,Texas,32.8707,61.90
+Citrus,Florida,20.2923,64.77
+Santa Rosa,Florida,-0.4767,38.46
+Chickasaw,Iowa,-37.7106,7.69
+Wise,Virginia,-1.0000,50.00
+Henderson,North Carolina,90.0364,92.86
+Morgan,Alabama,-18.8435,36.36
+Conway,Arkansas,46.5112,73.68
+Wood,Ohio,-4.9799,42.86
+Anderson,Tennessee,5.4092,63.64
+Roanoke,Virginia,-23.6117,25.00
+Sanpete,Utah,81.6700,74.13
+Caddo,Louisiana,65.9446,60.53
+Polk,Florida,89.8622,54.59
+Manatee,Florida,17.6270,55.77
+Benton,Arkansas,-0.7000,50.00
+Montgomery,Texas,10.6514,45.95
+Muskogee,Oklahoma,13.1296,75.00
+Tipton,Indiana,-27.8945,47.55
+Shelby,Alabama,82.0916,52.01
+Fremont,Wyoming,16.8568,46.15
+Matanuska-Susitna,Alaska,-1.3686,47.37
+Montrose,Colorado,34.6782,87.10
+Niagara,New York,3.1240,55.56
+Henderson,Texas,57.3432,45.74
+Dunklin,Missouri,1.0000,50.00
+Washington,Florida,-29.2247,25.00
+Bethel,Alaska,59.2904,92.00
+Carroll,Illinois,-24.5526,27.27
+Searcy,Arkansas,-1.3000,50.00
+Stearns,Minnesota,-32.4639,25.00
+Iredell,North Carolina,21.7209,62.50
+Lorain,Ohio,16.6071,86.96
+Cochise,Arizona,30.2800,85.71
+Carter,Kentucky,26.3517,75.00
+Butler,Kentucky,-12.4440,19.08
+Ravalli,Montana,36.1812,74.07
 Daviess,Kentucky,4.2000,50.00
-Union,North Carolina,4.2000,40.00
+Brazoria,Texas,87.0934,50.35
+Montgomery,Tennessee,71.0303,72.41
+White,Illinois,-39.3536,13.04
+Montgomery,Kansas,16.0358,66.67
+Wayne,New York,23.0070,84.31
+Pershing,Nevada,-2.0799,10.00
+Choctaw,Alabama,-5.1278,25.00
+Taylor,Texas,72.7159,64.29
+Cape May,New Jersey,35.1333,72.22
+Finney,Kansas,21.1242,96.08
+Denton,Texas,82.4763,57.50
+Flagler,Florida,91.0991,78.79
+Catawba,North Carolina,41.0811,85.71
+Bell,Texas,40.6312,72.73
+Butler,Ohio,40.1409,86.21
+Wabash,Indiana,21.4917,75.00
+Utah,Utah,28.3500,56.25
+Marshall,Alabama,35.0440,66.67
+Douglas,Colorado,3.5356,46.67
+Morgan,Illinois,-2.2000,50.00
+Aransas,Texas,16.0556,52.94
+Natchitoches,Louisiana,31.8816,66.67
+Cullman,Alabama,2.0000,50.00
+Langlade,Wisconsin,91.4687,60.16
+Anoka,Minnesota,2.4224,37.04
+Eureka,Nevada,34.4021,85.71
+Jefferson,Texas,93.9003,65.00
+Concho,Texas,37.3989,87.50
+Boyd,Kentucky,-15.0499,25.00
+Laurens,Georgia,1.3000,50.00
+Major,Oklahoma,1.3000,50.00
+Bulloch,Georgia,1.0000,50.00
+Anchorage,Alaska,84.6672,56.74
+Monroe,Missouri,86.9054,82.44
+Erie,Ohio,-1.0487,42.62
+Washington,Rhode Island,-21.0851,33.33
+Lumpkin,Georgia,-18.0564,40.00
+Jones,Mississippi,5.9250,78.57
+Bay,Florida,47.8432,63.92
+Sheridan,North Dakota,10.3715,34.09
+Charlotte,Florida,3.4969,42.11
+Cooke,Texas,30.0649,80.00
+Steuben,New York,-25.1447,12.50
+Page,Virginia,35.8916,72.73
+Golden Valley,Montana,-17.1609,7.69
+Piscataquis,Maine,92.9097,59.24
+Fulton,Indiana,1.6000,50.00
+Ottawa,Michigan,17.2534,52.38
+Otter Tail,Minnesota,35.5708,65.62
+Hempstead,Arkansas,4.0000,50.00
+Washington,Maryland,-6.8688,22.22
+Itasca,Minnesota,11.4518,62.50
+Washington,Colorado,29.5744,91.18
+Calhoun,Michigan,-13.3577,10.71
+Union,North Carolina,-25.5035,40.00
+Columbia,Florida,31.0371,65.22
+Cecil,Maryland,31.2723,75.00
+Lamar,Texas,42.1503,78.57
+Hettinger,North Dakota,84.4814,72.11
+Crawford,Michigan,48.4209,45.28
+Caledonia,Vermont,40.1870,98.31
+Cross,Arkansas,-33.5017,25.00
+Moniteau,Missouri,85.1441,57.36
+Ward,Texas,24.0709,55.56
+Sherburne,Minnesota,40.7916,71.43
+Yabucoa,Puerto Rico,18.9631,53.85
+Prince of Wales-Hyder,Alaska,-30.5314,22.22
+Merrick,Nebraska,2.8644,35.71
+Brevard,Florida,86.4071,88.79
+Yukon-Koyukuk,Alaska,89.1089,67.67
+Meeker,Minnesota,8.1605,57.14
+Boone,Illinois,-2.0000,50.00
+Comanche,Oklahoma,15.0192,54.17
+Sheboygan,Wisconsin,-19.9972,29.27
+Washington,Pennsylvania,3.1000,50.00
+Pike,Pennsylvania,33.0614,70.00
+Crow Wing,Minnesota,45.4902,81.58
+Spotsylvania,Virginia,1.0000,50.00
+Blount,Alabama,17.3319,70.00
+Tift,Georgia,-21.0937,40.00
+Elmore,Alabama,-11.5060,18.75
+LaSalle,Illinois,26.6245,92.68
+Hamlin,South Dakota,1.0000,50.00
+Cherokee,Kansas,-63.5673,57.63
+Kings,California,-10.3535,12.50
+Gilmer,Georgia,46.6403,90.91
+St. Tammany,Louisiana,4.2718,60.00
+Gregg,Texas,92.4792,80.97
+Berkeley,West Virginia,38.7928,62.50
+Ward,North Dakota,2.0000,50.00
+Jefferson,Illinois,83.6143,64.62
+Rio Grande,Colorado,-2.2000,50.00
+Orange,New York,94.7753,64.86
+Indian River,Florida,7.9717,40.82
+Union,Iowa,1.0000,50.00
+Knox,Tennessee,93.0343,63.82
+Sandusky,Ohio,48.3542,64.18
+Ontonagon,Michigan,16.1017,75.00
+Cache,Utah,-7.2416,16.67
+Richmond,New York,88.3423,66.82
+Mariposa,California,3.2173,22.92
+Pottawatomie,Kansas,26.0210,60.00
+Coweta,Georgia,1.0000,50.00
+Campbell,Kentucky,30.2375,68.75
+El Paso,Colorado,74.9566,51.91
+Neosho,Kansas,1.9272,44.44
+Davie,North Carolina,35.9716,75.00
+Ada,Idaho,83.9197,73.32
+Stark,Ohio,45.9493,60.00
+Grand Forks,North Dakota,88.8497,90.48
+Pasco,Florida,51.3018,58.33
+Potter,Texas,45.6134,64.71
+Raleigh,West Virginia,33.7311,80.00
+Madison,Arkansas,89.7411,96.77
+Oldham,Texas,29.8436,92.86
+Limestone,Alabama,-3.5774,33.33
+Hernando,Florida,15.3781,33.33
+Putnam,Tennessee,3.6000,50.00
+Beltrami,Minnesota,-10.3261,22.22
+Matagorda,Texas,-33.9023,20.00
+Washington,Wisconsin,35.0807,70.83
+Tyler,West Virginia,6.0485,75.00
+Mesa,Colorado,-14.2439,44.44
+Rappahannock,Virginia,20.4479,72.73
+Morgan,West Virginia,6.5695,78.57
+Fergus,Montana,62.8632,39.64
+Grayson,Texas,0.3536,38.89
+Wood,West Virginia,-9.0486,25.00
+Orocovis,Puerto Rico,86.8339,67.79
+Clark,Ohio,14.1569,80.00
+DeSoto,Florida,-28.4473,25.00
+Fayette,Pennsylvania,-20.9734,16.67
+Wood,Texas,-4.5512,30.00
+Preston,West Virginia,0.5905,44.44
+Taney,Missouri,-38.8967,10.00
+Ouachita,Louisiana,21.5165,70.00
+Berkshire,Massachusetts,-0.8989,30.00
+Randolph,North Carolina,2.2674,58.33
+Oceana,Michigan,1.0000,50.00
+Monroe,Florida,0.7495,47.14
+Walker,Texas,-35.2319,33.33
+Grant,Oregon,1.4650,71.43
+Franklin,Tennessee,7.3000,50.00
+St. Johns,Florida,20.7534,40.91
+Hot Spring,Arkansas,-1.1357,20.00
+Valencia,New Mexico,25.3839,61.90
+Long,Georgia,52.3499,56.00
+Bastrop,Texas,-4.7978,36.84
+Etowah,Alabama,-2.6000,50.00
+Charles Mix,South Dakota,44.1294,75.76
+Monroe,Illinois,-11.1187,30.43
+Weber,Utah,46.1302,84.62
+Escambia,Florida,89.3760,82.30
+Lowndes,Georgia,12.4809,54.55
+Volusia,Florida,40.6441,40.15
+Dixie,Florida,-32.8684,20.00
+Navajo,Arizona,13.4609,53.85
+Washington,Tennessee,14.2000,50.00
+Warren,Kentucky,87.4487,54.55
+Greenwood,Kansas,14.5945,62.22
+Suffolk,Massachusetts,92.9613,52.14
+Okaloosa,Florida,44.6120,79.84
+Westmoreland,Pennsylvania,86.1497,98.11
+McCurtain,Oklahoma,-30.3277,28.57
+Tulare,California,80.5120,59.91
+Vermilion,Illinois,-16.9193,25.00
+Parker,Texas,5.0000,50.00
+Lee,North Carolina,-2.0000,50.00
+Wayne,West Virginia,33.7378,71.43
+Kenton,Kentucky,15.4704,90.00
+Cass,Iowa,1.0000,50.00
+Gaston,North Carolina,-5.4211,39.29
+Monongalia,West Virginia,-10.2635,42.50
+Beaver,Pennsylvania,-12.1559,46.15
+Fannin,Georgia,-1.0000,50.00
+Anderson,Texas,-8.3203,41.67
+Ellis,Texas,0.6184,77.22
+Caldwell,North Carolina,22.3708,80.00
+Collier,Florida,39.9352,59.09
+Escambia,Alabama,17.2568,73.68
+McCulloch,Texas,-5.5413,33.33
+Mahoning,Ohio,82.3768,71.64
+Dodge,Georgia,-23.5352,16.33
+Cumberland,Illinois,17.1804,73.68
+Saline,Nebraska,-10.8218,26.67
+Delaware,Indiana,37.4317,65.22
+Tyler,Texas,46.6306,63.16
+Coryell,Texas,-7.0148,42.86
+Clinton,Ohio,-5.7710,25.00
+Schuylkill,Pennsylvania,21.4829,55.56
+Stephenson,Illinois,22.0337,60.00
+Monroe,Tennessee,1.0000,50.00
+Lawrence,Pennsylvania,31.9642,53.85
+Worcester,Maryland,13.1334,90.00
+Nye,Nevada,28.0860,93.75
+Garland,Arkansas,-25.9658,40.00
+Berrien,Michigan,-6.9425,33.33
+Outagamie,Wisconsin,-9.4241,40.00
+Spokane,Washington,85.2945,66.08
+Cape Girardeau,Missouri,-8.2248,25.00
+Richland,Ohio,61.0140,68.57
+Galveston,Texas,80.0923,53.93
+Pottawattamie,Iowa,45.7428,78.57
+Bossier,Louisiana,-0.0151,21.88
+Orleans,Louisiana,-27.6279,63.45
+Chautauqua,New York,26.7503,78.57
+Hardeman,Tennessee,71.8061,81.62
+Appanoose,Iowa,42.6690,76.47
+Mobile,Alabama,82.9775,52.02
+Davis,Utah,6.1760,57.14
+Brunswick,North Carolina,66.4581,77.27
+Waukesha,Wisconsin,4.5602,10.20
+Yuma,Arizona,53.6588,60.53
+Adams,Pennsylvania,-15.8392,35.71
+Coles,Illinois,19.0386,90.32
+Henderson,Kentucky,6.8307,60.00
+Carroll,Maryland,88.1211,52.35
+Smith,Texas,0.7173,72.73
+Washington,Oklahoma,19.5408,66.67
+Erath,Texas,4.3263,28.00
+Fairbanks North Star,Alaska,-12.8280,30.56
+Vanderburgh,Indiana,90.4599,73.93
+York,South Carolina,82.7715,81.08
+Dorchester,Maryland,-30.4717,33.33
+Coleman,Texas,92.7017,56.69
+Gallia,Ohio,-23.8202,12.00
+Saline,Kansas,40.0982,78.57
+Roscommon,Michigan,-9.8203,40.00
+Ringgold,Iowa,15.8154,80.00
+Stevens,Washington,2.3000,50.00
+Bowie,Texas,17.5906,60.00
+Middlesex,Massachusetts,83.9802,56.26
+Kanawha,West Virginia,40.6849,85.71
+Allegany,Maryland,25.0097,54.55
+Rockwall,Texas,16.1963,55.17
+Toombs,Georgia,1.0000,50.00
+Flathead,Montana,49.8483,78.57
+Bartow,Georgia,-36.8112,7.69
+Cabarrus,North Carolina,1.3000,50.00
+Grant,Kentucky,-23.2740,25.00
+Belknap,New Hampshire,33.6839,91.67
+Tillamook,Oregon,85.2044,93.82
+Titus,Texas,88.2016,66.14
+Davidson,North Carolina,1.5000,50.00
+Moore,North Carolina,15.6862,66.67
+Clayton,Iowa,45.4335,80.00
+Bristol,Massachusetts,38.1489,75.56
+McHenry,Illinois,13.3300,61.11
+Dorchester,South Carolina,-1.2487,30.00
+Lamoille,Vermont,82.4035,76.44
+Jasper,Indiana,-18.9909,40.00
+Licking,Ohio,88.5711,61.43
+San Juan,Puerto Rico,89.0979,61.11
+Sussex,New Jersey,44.5297,90.91
+Caldwell,Texas,-6.9788,33.33
+Humboldt,Nevada,49.3680,78.95
+Loudon,Tennessee,-10.9964,33.33
+Clay,Illinois,-34.2890,20.00
+Waupaca,Wisconsin,26.6069,80.43
+Hillsborough,New Hampshire,31.1631,61.54
+Ford,Kansas,8.4604,66.67
+Valley,Nebraska,2.7504,43.48
+Kern,California,-31.7853,72.93
+Collin,Texas,64.5970,44.08
+Pike,Kentucky,56.4919,60.87
+Sedgwick,Kansas,-69.7561,58.72
+Claiborne,Louisiana,43.0228,90.91
+St. Lucie,Florida,85.8343,78.00
+Greene,Tennessee,-12.4931,14.29
+Lewis and Clark,Montana,22.5254,87.50
+Forest,Wisconsin,-28.7655,17.65
+Comal,Texas,23.2000,50.00
+Portage,Ohio,15.7891,85.71
+Robeson,North Carolina,27.7061,66.67
+Isabella,Michigan,82.2240,51.02
+Hopkins,Kentucky,-22.0518,20.00
+Dallas,Iowa,14.6261,66.67
+East Baton Rouge,Louisiana,85.7613,63.32
+Marion,Kansas,-2.6486,33.33
+St. Clair,Michigan,5.7160,66.67
+Carter,Oklahoma,12.2949,66.67
+Natrona,Wyoming,94.2501,65.95
+Meade,South Dakota,-27.9131,33.33
+Kendall,Texas,-6.0081,38.46
+Rockingham,New Hampshire,35.9124,77.78
+Otero,Colorado,2.6254,18.75
+Butler,Pennsylvania,63.1521,91.38
+Kearney,Nebraska,35.9403,75.00
+Monmouth,New Jersey,83.2031,61.03
+Oneida,New York,82.2002,72.34
+Todd,Minnesota,25.1313,75.00
+Tulsa,Oklahoma,86.7006,53.50
+Union,Illinois,-19.0649,33.33
+Mohave,Arizona,39.3351,86.49
+Norton,Kansas,82.4592,83.33
+Berks,Pennsylvania,7.1684,80.00
+Orange,Texas,45.8386,70.59
+Custer,Nebraska,80.9910,74.33
+Jasper,Missouri,10.3000,50.00
+Sullivan,Tennessee,2.6000,50.00
+Burleson,Texas,9.5105,71.43
+McCracken,Kentucky,30.9346,80.00
+Adair,Iowa,-15.2176,44.44
+Marion,Florida,71.0314,60.38
+Cambria,Pennsylvania,24.3101,59.26
+Mercer,West Virginia,37.6612,53.33
+Jefferson,New York,4.0724,75.00
+Martin,Florida,33.7731,60.00
+Ector,Texas,4.0000,50.00
+Leon,Texas,30.7336,80.00
+Sullivan,New York,3.2807,66.67
+Gila,Arizona,-11.1280,37.50
+Knox,Maine,0.9000,50.00
+Midland,Texas,46.3566,78.50
+Sully,South Dakota,-0.6853,47.73
+Camden,Georgia,2.0000,50.00
+Madison,Alabama,11.4844,49.25
+Clinton,Illinois,-7.3599,45.24
+Tuscaloosa,Alabama,28.8720,75.71
+Cass/Van Buren,Missouri,2.0000,50.00
+Kenai Peninsula,Alaska,-4.5048,33.33
+Torrance,New Mexico,88.0771,56.17
+Covington,Alabama,29.4716,55.17
+Carroll,Georgia,23.3493,66.67
+Scotts Bluff,Nebraska,-19.4020,42.86
+Jefferson,Missouri,-37.8240,16.67
+Walker,Alabama,50.1175,43.84
+Cattaraugus,New York,3.0351,54.55
+Berrien,Georgia,46.3728,87.50
+Cleveland,Oklahoma,82.2291,59.47
+Chelan,Washington,86.4438,89.13
+McLennan,Texas,34.3152,67.50
+Bonner,Idaho,0.0000,50.00
+Boone,Indiana,-2.8196,37.50
+Dare,North Carolina,17.4817,71.43
+Beaver,Utah,6.3477,75.00
+Oswego,New York,40.3901,61.29
+Wood,Wisconsin,1.9000,50.00
+Sussex,Delaware,89.8380,52.33
+Georgetown,South Carolina,-34.4547,12.50
+Stanly,North Carolina,-10.4627,40.00
+Marion,Texas,4.2068,66.67
+LaSalle,Louisiana,35.0943,75.00
+Franklin,Illinois,48.0080,81.82
+Delaware,Ohio,39.2681,64.10
+Muhlenberg,Kentucky,-32.2878,33.33
+Nueces,Texas,82.1672,67.94
+Ontario,New York,88.7788,96.88
+Dixon,Nebraska,-1.0000,50.00
+Woodruff,Arkansas,13.7961,66.67
+Walton,Georgia,-23.2743,40.00
+Grand Traverse,Michigan,35.8943,75.76
+Marathon,Wisconsin,26.7663,69.23
+Ketchikan Gateway,Alaska,-7.7495,40.00
+Aiken,South Carolina,29.7993,70.00
+Pulaski,Kentucky,38.2224,66.67
+Lander,Nevada,92.6079,56.45
+Somerset,Pennsylvania,-24.5061,14.29
+Jackson,Oregon,-27.5039,14.29
+Nassau,Florida,7.4748,53.85
+Freestone,Texas,94.8106,93.92
+Wayne,Iowa,8.2433,56.25
+Park,Colorado,89.8197,52.28
+Jefferson,Louisiana,0.0000,50.00
+Liberty,Texas,51.6579,60.00
+Kingsbury,South Dakota,-28.0318,42.86
+Weld,Colorado,-4.4155,40.00
+Hampden,Massachusetts,-17.7124,48.48
+Fayette,Texas,-36.3600,6.25
+Idaho,Idaho,3.5923,17.50
+Butler,Iowa,-31.0476,25.00
+Cabell,West Virginia,-9.6642,48.00
+Putnam,New York,-8.2197,21.05
+Sarasota,Florida,90.1985,64.37
+Shelby,Texas,81.0134,73.33
+Chambers,Texas,46.9532,10.81
+Nez Perce,Idaho,-19.8862,45.83
+Attala,Mississippi,94.6262,55.91
+Benton,Washington,14.7456,69.23
+Calvert,Maryland,-13.9935,13.79
+Yakima,Washington,23.2217,60.00
+Waynesboro City,Virginia,2.3000,50.00
+Keokuk,Iowa,-0.0519,75.00
+Porter,Indiana,1.0000,50.00
+Craven,North Carolina,5.9657,41.67
+Hale,Texas,-26.9435,10.00
+Madera,California,14.1995,52.00
+Horry,South Carolina,60.6754,45.10
+Kaufman,Texas,-9.4095,14.29
+Cheshire,New Hampshire,-2.1310,33.33
+Cedar,Iowa,14.7133,53.33
+Lafayette,Florida,88.6414,96.77
+Mason,Michigan,-22.7289,25.00
+Richland,Illinois,-25.7332,25.00
+Carteret,North Carolina,-18.8216,14.29
+Clinton,Pennsylvania,-3.2118,33.33
+Mecosta,Michigan,27.8911,91.67
+Tuscarawas,Ohio,-1.0000,50.00
+Chemung,New York,-7.2758,44.44
+Bannock,Idaho,1.0000,50.00
+Houston,Alabama,9.6984,66.67
+Atoka,Oklahoma,4.4812,60.00
+Spartanburg,South Carolina,-17.1485,36.36
+Wilson,Tennessee,77.3407,61.54
+Hamilton,New York,26.6249,66.67
+Craighead,Arkansas,5.8257,64.29
+Randolph,Illinois,40.2503,75.00
+Mitchell,Kansas,-25.1777,21.43
+York,Virginia,57.1066,87.27
+Hancock,West Virginia,14.0394,70.59
+St. John the Baptist,Louisiana,0.2303,66.67
+Talladega,Alabama,-1.3000,50.00
+Baldwin,Alabama,60.2390,71.43
+Cowley,Kansas,1.0000,50.00
+Clay,Florida,-11.1308,41.67
+Sterling,Texas,1.6000,50.00
+Fayette,Georgia,20.0197,83.33
+Terrebonne,Louisiana,2.3000,50.00
+Howard,Indiana,1.3000,50.00
+Polk,Minnesota,46.9048,80.25
+Hamilton,Indiana,10.9783,36.00
+Rutherford,North Carolina,18.4483,82.61
+Adair,Missouri,9.1654,62.50
+Suffolk,New York,94.2998,52.28
+Dubuque,Iowa,-14.7362,15.38
+Allen,Kansas,25.7764,83.33
+Sevier,Tennessee,10.7449,88.89
+Hamilton,Tennessee,89.1683,56.25
+Guam,Guam,3.5000,50.00
+Ocean,New Jersey,88.4455,60.25
+Morrison,Minnesota,92.4882,57.68
+Luzerne,Pennsylvania,-10.5299,33.33
+Texas,Oklahoma,28.0868,66.67
+Vernon,Wisconsin,-1.0000,50.00
+Dona Ana,New Mexico,55.4836,65.45
+Hardin,Kentucky,32.7296,58.06
+San Juan,New Mexico,-3.7000,50.00
+Cass,North Dakota,5.2782,42.22
+Calcasieu,Louisiana,-7.3279,25.00
+El Dorado,California,-8.7834,32.05
+Johnson,Texas,-27.3784,20.00
+Lee,Alabama,87.3214,77.27
+Washington,Arkansas,-11.1441,36.96
+Hampshire,Massachusetts,31.0252,56.41
+San Jacinto,Texas,1.0000,50.00
+Carver,Minnesota,2.6000,50.00
+Oklahoma,Oklahoma,92.4664,62.39
+Oconee,South Carolina,27.7753,58.82
+Madison,New York,80.1408,64.31
+Shasta,California,-12.9862,25.00
+Jewell,Kansas,-7.9276,48.00
+Yancey,North Carolina,-7.2500,20.00
+Clark,Indiana,-9.6714,25.00
+Monona,Iowa,31.6183,66.67
+St. Charles,Missouri,7.5000,50.00
+Lycoming,Pennsylvania,68.0399,68.47
+Brewster,Texas,-16.9298,33.33
+Carson City,Nevada,25.2087,60.87
+Webster,Missouri,20.5988,87.50
+Ozark,Missouri,29.1782,70.00
+Madison,Kentucky,40.1913,72.73
+Decatur,Iowa,27.0099,66.67
+Pickaway,Ohio,24.0199,66.67
+Rapides,Louisiana,18.2766,57.14
+Tuolumne,California,-14.7196,40.00
+Marion,Kentucky,94.7917,60.33
+Lake,Florida,28.6153,67.39
+Randall,Texas,1.6000,50.00
+Rowan,North Carolina,-0.5524,33.33
+Lancaster,Pennsylvania,86.3586,74.11
+Placer,California,37.2715,47.98
+Lauderdale,Alabama,93.0096,63.41
+Coffee,Tennessee,11.4839,66.67
+Livingston,New York,50.8395,91.43
+Macon,Illinois,57.3844,60.00
+Jackson,Mississippi,-1.4720,37.50
+Hancock,Indiana,-16.7214,25.00
+Golden Valley,North Dakota,-30.5891,18.18
+Middlesex,Connecticut,29.5265,51.47
+Washington,Maine,30.0937,85.71
+Hall,Nebraska,59.3026,82.14
+Ottawa,Kansas,-14.2664,6.82
+Macomb,Michigan,16.6158,62.50
+Carroll,Iowa,-5.5639,16.67
+Kenosha,Wisconsin,1.5483,38.89
+Chattooga,Georgia,25.8492,89.83
+Racine,Wisconsin,18.9025,57.14
+Lubbock,Texas,84.7920,57.92
+Lexington,South Carolina,57.6000,60.00
+Leavenworth,Kansas,21.9115,80.00
+Fremont,Iowa,59.9299,93.33
+Brown,Wisconsin,22.4852,52.73
+Tazewell,Virginia,0.6965,33.33
+Maury,Tennessee,-4.4076,37.50
+Clarendon,South Carolina,85.2796,50.57
+Columbiana,Ohio,9.7263,47.83
+Blair,Pennsylvania,34.0859,87.50
+Montgomery,North Carolina,1.0000,50.00
+Ohio,West Virginia,-1.1589,41.18
+St. Lawrence,New York,55.0432,60.00
+York,Pennsylvania,2.0000,50.00
+Cass,Michigan,7.7454,57.14
+DeSoto,Mississippi,26.5764,80.00
+Greenville,South Carolina,68.2216,54.49
+Sangamon,Illinois,87.1155,79.26
+Greene,Missouri,27.9131,58.18
+Calloway,Kentucky,33.3980,85.71
+Lee,Florida,90.4925,61.43
+Rockbridge,Virginia,2.7650,30.00
+Harrison,Mississippi,80.1967,51.04
+Carson,Texas,1.3000,50.00
+Lamb,Texas,94.9988,68.67
+Platte,Missouri,-1.0000,50.00
+Avoyelles,Louisiana,81.6984,51.63
+Houghton,Michigan,5.9155,66.67
