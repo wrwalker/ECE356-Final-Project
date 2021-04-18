@@ -1,0 +1,239 @@
+county,state,weightedSentimentOfTweets,percentOfTweets
+Essex,New Jersey,75.2830,41.59
+Riverside,California,84.3965,58.76
+San Bernardino,California,-83.2783,30.46
+James City,Virginia,2.0474,36.49
+Gwinnett,Georgia,1.2249,49.57
+Saratoga,New York,-18.3741,43.43
+Dutchess,New York,-14.6781,41.67
+Lake,Illinois,33.5457,80.16
+Middlesex,New Jersey,20.7104,41.44
+Lake,Indiana,-14.0269,5.13
+Island,Washington,8.0780,53.33
+Clallam,Washington,-31.5922,11.11
+Litchfield,Connecticut,20.9366,66.67
+Broomfield,Colorado,30.6869,62.50
+Montgomery,Virginia,1.3000,50.00
+Genesee,Michigan,15.9135,47.73
+Fayette,Kentucky,64.3424,50.45
+Webb,Texas,26.8733,55.56
+Arapahoe,Colorado,-17.8504,5.97
+Imperial,California,-11.5377,9.09
+Cumberland,North Carolina,-10.0888,34.48
+Clay,Minnesota,-11.0869,33.33
+Somerset,New Jersey,-2.8110,46.62
+DeKalb,Illinois,56.3190,25.00
+Cameron,Texas,18.5157,66.67
+Hinds,Mississippi,8.9934,53.19
+Richland,South Carolina,-16.5833,87.50
+La Crosse,Wisconsin,12.9819,80.00
+Northampton,Pennsylvania,23.0373,56.25
+Richmond,Georgia,-26.5938,34.94
+Starr,Texas,16.5306,81.82
+Crittenden,Arkansas,40.4976,90.00
+Blaine,Idaho,-3.5712,37.07
+Champaign,Illinois,-0.9267,33.33
+Morris,New Jersey,-15.3015,22.37
+Albany,New York,33.7000,50.00
+Green,Wisconsin,-28.8392,33.33
+Frederick,Maryland,20.1000,50.00
+Merrimack,New Hampshire,80.9923,58.42
+Bronx,New York,93.8820,56.37
+Ingham,Michigan,86.1413,59.54
+St. Louis,Minnesota,29.5432,62.75
+Muskegon,Michigan,32.9711,66.67
+Broome,New York,-5.0314,46.15
+Arlington,Virginia,75.4747,70.93
+Lane,Oregon,-56.2731,18.42
+Butte,California,-3.7056,26.67
+Buncombe,North Carolina,15.7240,37.35
+Lake,Colorado,-11.8954,33.33
+Roanoke City,Virginia,-1.3231,22.86
+Johnson,Iowa,-12.8814,37.50
+Erie,New York,91.6746,53.10
+Ashland,Wisconsin,-5.7158,5.26
+Mercer,New Jersey,-4.4883,13.21
+DuPage,Illinois,4.0178,35.83
+Humboldt,California,21.0447,75.00
+Providence,Rhode Island,-85.6322,43.54
+Anne Arundel,Maryland,-11.6312,20.53
+Bergen,New Jersey,-17.5372,28.64
+Clark,Washington,-6.3176,7.14
+Penobscot,Maine,-16.5440,16.67
+Sonoma,California,19.5090,23.93
+Rockdale,Georgia,9.1055,57.14
+Routt,Colorado,-4.3985,28.57
+Scott,Iowa,0.6742,42.86
+Pinellas,Florida,32.6239,27.34
+Story,Iowa,-93.9622,28.32
+Montgomery,Alabama,22.9988,54.17
+Hays,Texas,17.9996,55.81
+Jefferson,Colorado,-15.5904,34.04
+Missoula,Montana,15.9949,52.17
+San Juan,Washington,-3.2613,14.29
+Hawaii,Hawaii,85.5963,61.41
+Solano,California,2.3283,30.36
+Lucas,Ohio,26.0945,42.05
+Hampton City,Virginia,-7.3957,30.19
+Jefferson,Alabama,22.9977,45.76
+Newport News City,Virginia,15.2599,31.82
+Oktibbeha,Mississippi,25.4830,66.67
+Martinsville City,Virginia,19.4104,66.67
+Winchester City,Virginia,-1.0000,50.00
+Washington,Vermont,-4.5320,26.47
+Plymouth,Massachusetts,-15.4197,47.50
+St. Joseph,Indiana,18.4278,55.88
+Virginia Beach City,Virginia,26.7067,42.38
+Newport,Rhode Island,-12.6448,41.18
+Fresno,California,1.9773,37.60
+Santa Cruz,California,9.4570,60.00
+Washington,Oregon,-26.0611,31.91
+Clinton,New York,-29.0144,37.50
+Clarke,Georgia,-5.6225,25.00
+Fredericksburg City,Virginia,34.6993,69.39
+Pierce,Washington,41.6217,65.32
+San Joaquin,California,94.2493,46.03
+Osceola,Florida,-11.2869,25.81
+Jackson,Illinois,-25.8152,36.36
+Adams,Colorado,2.6000,50.00
+Larimer,Colorado,-2.1706,61.54
+Liberty,Georgia,-1.0000,50.00
+Charleston,South Carolina,14.7062,45.12
+Monroe,Pennsylvania,-6.0703,42.11
+Tippecanoe,Indiana,32.0467,76.92
+Nash,North Carolina,20.1655,92.31
+Columbia,New York,20.0002,51.22
+Linn,Iowa,-0.1473,43.48
+York,Maine,26.1699,83.33
+Santa Barbara,California,25.9389,21.32
+San Luis Obispo,California,-44.2071,31.25
+Maui,Hawaii,-2.0781,32.79
+Will,Illinois,-31.9919,13.48
+Rock Island,Illinois,-8.6061,16.67
+Summit,Ohio,-53.0733,48.35
+Peoria,Illinois,21.1657,40.00
+Chittenden,Vermont,-17.0178,20.41
+Bucks,Pennsylvania,97.3090,35.07
+Guilford,North Carolina,13.2240,49.44
+El Paso,Texas,35.1479,38.61
+Davidson,Tennessee,-21.5818,41.10
+Johnson,Kansas,28.1957,50.68
+Chester,Pennsylvania,20.1937,65.12
+Leon,Florida,33.0045,46.53
+Gloucester,New Jersey,0.4187,83.33
+Contra Costa,California,-21.1743,25.00
+Black Hawk,Iowa,14.6215,44.44
+Cumberland,Maine,0.7784,23.08
+Apache,Arizona,25.3449,66.67
+Hudson,New Jersey,80.1543,41.87
+Winnebago,Illinois,24.7165,62.20
+Camden,New Jersey,-84.5542,46.30
+DeKalb,Georgia,-2.8425,35.29
+Westchester,New York,17.6624,32.47
+Clackamas,Oregon,17.9349,58.33
+Howard,Maryland,25.1672,68.75
+Mono,California,-25.0455,14.29
+Delaware,Pennsylvania,54.2555,54.86
+Dauphin,Pennsylvania,-82.8224,47.23
+Orange,North Carolina,80.6434,65.42
+Williamson,Texas,-11.6724,38.46
+New Hanover,North Carolina,81.8255,58.56
+Norfolk City,Virginia,-1.7000,50.00
+Merced,California,9.0861,66.67
+Tarrant,Texas,-90.1606,37.45
+Marion,Oregon,10.9012,38.76
+Gallatin,Montana,45.0915,88.64
+Montgomery,Ohio,29.2470,64.95
+Summit,Utah,-1.6364,36.36
+Kitsap,Washington,-22.4068,29.95
+Forsyth,North Carolina,-3.2000,50.00
+Rockland,New York,24.0491,44.68
+Silver Bow,Montana,-21.7979,22.22
+Albany,Wyoming,-39.2049,15.79
+Snohomish,Washington,39.0095,64.58
+Maverick,Texas,-13.0479,23.53
+Bibb,Georgia,22.1703,56.00
+Rock,Wisconsin,-31.5105,38.10
+Gadsden,Florida,-32.6774,15.79
+Chatham,Georgia,21.5480,37.79
+Charlottesville City,Virginia,83.4462,82.68
+Shawnee,Kansas,36.5611,63.77
+Tompkins,New York,87.5398,69.77
+Lackawanna,Pennsylvania,29.2886,60.81
+Ventura,California,81.6403,53.29
+Fort Bend,Texas,3.8360,62.16
+Schenectady,New York,-6.0899,19.17
+Seminole,Florida,8.0839,33.33
+Passaic,New Jersey,50.6089,81.58
+Alexandria City,Virginia,65.2047,70.00
+Pima,Arizona,-86.3622,44.08
+Thurston,Washington,21.4691,52.94
+Cobb,Georgia,78.7420,54.50
+Dane,Wisconsin,49.4445,34.34
+Bexar,Texas,-89.7998,35.78
+Monterey,California,-2.0810,25.94
+Milwaukee,Wisconsin,91.3883,62.61
+Washington,Minnesota,-11.8338,5.41
+Rensselaer,New York,1.3000,50.00
+New London,Connecticut,-26.9065,33.33
+Palm Beach,Florida,-33.1969,30.99
+Sandoval,New Mexico,-6.4508,43.33
+Pitt,North Carolina,2.3380,68.97
+Lynchburg City,Virginia,-19.0566,27.06
+Harrisonburg City,Virginia,-11.0043,20.00
+Essex,Massachusetts,-24.8500,26.04
+Athens,Ohio,-0.3000,50.00
+Dakota,Minnesota,12.2566,60.42
+Cumberland,New Jersey,-16.4768,11.11
+Hidalgo,Texas,45.6316,23.65
+Washtenaw,Michigan,59.9047,45.59
+Washington,North Carolina,26.1426,86.67
+Douglas,Nebraska,54.3930,54.87
+Clatsop,Oregon,88.0427,71.67
+New Castle,Delaware,87.5335,81.48
+Fairfax City,Virginia,-11.3205,64.71
+Honolulu,Hawaii,60.7615,28.52
+Kauai,Hawaii,44.8001,65.57
+Warren,Mississippi,1.0000,50.00
+Dallas,Alabama,4.2838,85.71
+Nassau,New York,-3.9563,21.21
+St. Louis,Missouri,-6.3562,41.94
+Whatcom,Washington,-10.3973,46.43
+Montgomery,Pennsylvania,10.8629,36.54
+San Mateo,California,61.2734,51.20
+Adams,Mississippi,-12.2572,16.67
+Oakland,Michigan,72.7066,58.38
+Loudoun,Virginia,27.3066,41.18
+Monroe,Indiana,34.9802,58.06
+Onondaga,New York,-83.0417,23.81
+Duval,Texas,1.6000,50.00
+Pueblo,Colorado,-16.8634,20.22
+Teton,Wyoming,16.9900,69.23
+Manassas City,Virginia,10.4163,68.53
+Bolivar,Mississippi,-2.3970,40.00
+Mendocino,California,-20.6776,15.79
+Kalamazoo,Michigan,-4.7678,21.52
+Blue Earth,Minnesota,-55.9045,28.57
+Ramsey,Minnesota,7.6313,50.69
+Union,New Jersey,-12.7304,27.27
+Taos,New Mexico,-31.5204,5.36
+Kane,Illinois,-35.4701,37.50
+Pulaski,Arkansas,18.0454,46.88
+Williamsburg City,Virginia,19.6323,28.99
+Stanislaus,California,-16.1005,31.58
+Ulster,New York,-17.2299,36.25
+Barnstable,Massachusetts,-7.5017,40.98
+Talbot,Maryland,-13.9891,42.86
+Chesapeake City,Virginia,16.3742,58.06
+Lincoln,Oregon,17.9078,66.67
+Kent,Michigan,-3.7993,49.32
+Erie,Pennsylvania,16.2050,74.77
+Durham,North Carolina,80.8293,57.26
+Napa,California,-4.2135,22.22
+Lake,California,-11.5292,17.65
+Addison,Vermont,-37.4561,4.03
+Burlington,New Jersey,-11.5821,27.59
+Baltimore,Maryland,-8.5036,22.00
+Coconino,Arizona,46.3446,59.52
+Polk,Iowa,-62.4654,40.00
+Lehigh,Pennsylvania,25.9653,40.81
