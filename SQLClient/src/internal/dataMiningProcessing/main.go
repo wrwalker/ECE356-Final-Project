@@ -9,8 +9,8 @@ import (
 )
 
 const testing = false // testing flag to do a limit on query return size
-const likesMultiplyer = float64(0.1)
-const retweetMultiplyer = float64(0.5)
+const likesMultiplyer = float64(0.3)
+const retweetMultiplyer = float64(0.6)
 
 const dir = "../dataMiningDataSets/"
 
@@ -65,16 +65,17 @@ func main() {
 	for _, row := range tweets {
 		trumpOrBiden := fmt.Sprintf("%s", row["trumpOrBiden"])
 		sentimentScore, _ := strconv.Atoi(string(row["sentimentScore"].([]byte)))
+		sentimentScoreFloat := float64(sentimentScore)
 		county_name := fmt.Sprintf("%s", row["county_name"])
 		state_name := fmt.Sprintf("%s", row["state_name"])
 		likes, _ := strconv.Atoi(string(row["likes"].([]byte)))
 		retweetCount, _ := strconv.Atoi(string(row["retweetCount"].([]byte)))
 
 		key := fmt.Sprintf("%s-%s", state_name, county_name)
-		if sentimentScore == 0 { // adjust sentiment to have neutral centered at 0
-			sentimentScore = -1
+		if sentimentScoreFloat == 0 { // adjust sentiment to have neutral centered at 0
+			sentimentScoreFloat = -1
 		}
-		score := float64(float64(sentimentScore) * (1 + float64(likes)*likesMultiplyer + float64(retweetCount)*retweetMultiplyer))
+		score := float64(sentimentScoreFloat * (1 + float64(likes)*likesMultiplyer + float64(retweetCount)*retweetMultiplyer))
 		if _, ok := countiesAndStatesList[0][key]; !ok {
 			totalTweetsForCounty[key] = 0
 			countiesAndStatesList[0][key] = &TweetData{
@@ -126,8 +127,8 @@ func main() {
 
 	// get percentage of Tweets
 	for k, _ := range countiesAndStatesList[0] {
-		countiesAndStatesList[0][k].percentOfTweets = 1.0 * countiesAndStatesList[0][k].percentOfTweets / float64(totalTweetsForCounty[k]) * 100.0
-		countiesAndStatesList[1][k].percentOfTweets = 1.0 * countiesAndStatesList[0][k].percentOfTweets / float64(totalTweetsForCounty[k]) * 100.0
+		countiesAndStatesList[0][k].percentOfTweets = countiesAndStatesList[0][k].percentOfTweets / float64(totalTweetsForCounty[k]) * 100.0
+		countiesAndStatesList[1][k].percentOfTweets = countiesAndStatesList[1][k].percentOfTweets / float64(totalTweetsForCounty[k]) * 100.0
 	}
 
 	// print to csv
@@ -145,14 +146,14 @@ func main() {
 		}
 		defer f.Close()
 
-		//county string
-		//state string
-		//weightedSentimentOfTweets float64
-		//won string
-		//percentOfTweets float64
-		f.WriteString(fmt.Sprintf("county,state,weightedSentimentOfTweets,won,percentOfTweets\n"))
+		// filter out losses
+		f.WriteString(fmt.Sprintf("county,state,weightedSentimentOfTweets,percentOfTweets\n"))
 		for _, tweet := range countiesAndStatesList[i] {
-			f.WriteString(fmt.Sprintf("%s,%s,%.4f,%s,%.2f\n", tweet.county, tweet.state, tweet.weightedSentimentOfTweets, tweet.won, tweet.percentOfTweets))
+
+			if tweet.won == "y" && tweet.weightedSentimentOfTweets < 100 && tweet.weightedSentimentOfTweets > -100 { // remove outliers and only if won
+
+				f.WriteString(fmt.Sprintf("%s,%s,%.4f,%.2f\n", tweet.county, tweet.state, tweet.weightedSentimentOfTweets, tweet.percentOfTweets))
+			}
 		}
 
 	}
